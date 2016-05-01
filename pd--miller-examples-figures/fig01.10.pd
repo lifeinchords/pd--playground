@@ -1,0 +1,64 @@
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct seg float x float y float dx float dy float w;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct vaxis float x float y float h float h-3;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct l-arrow float x float y float z;
+#N struct u-arrow float x float y float z;
+#N struct d-arrow float x float y float z;
+#N struct v-seg float x float y float z float w;
+#N struct h-seg float x float y float z float w;
+#N struct rect float x float y float w float h;
+#N struct haxis float x float y float w float w-3;
+#N struct frame float x float y float w float h;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N struct thickcircle float x float y float color float h float h2
+;
+#N canvas 353 220 244 126 10;
+#X obj 16 50 templates;
+#N canvas 0 0 414 183 fig 1;
+#X floatatom 22 87 0 0 0 0 - - -;
+#X obj 22 56 + 13;
+#X msg 22 26 21;
+#X text 54 150 (a);
+#X obj 211 130 dac~;
+#X obj 211 41 osc~;
+#X floatatom 211 16 0 0 0 0 - - -;
+#X text 236 155 (b);
+#X text 246 18 frequency;
+#X text 247 41 sinusoidal oscillator;
+#X text 240 102 multiplier;
+#X text 246 131 output;
+#X obj 211 102 *~;
+#X msg 222 73 0.1;
+#X msg 259 73 0;
+#X scalar l-arrow 51 97 22 \;;
+#X text 81 25 message box;
+#X text 78 55 object box;
+#X text 76 97 (GUI) box;
+#X text 79 82 number;
+#X scalar l-arrow 57 63 17 \;;
+#X scalar l-arrow 55 34 23 \;;
+#X text 291 78 (on/off);
+#X text 292 64 amplitude;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 5 0 12 0;
+#X connect 6 0 5 0;
+#X connect 12 0 4 0;
+#X connect 13 0 12 1;
+#X connect 14 0 12 1;
+#X restore 18 26 pd fig;

@@ -1,0 +1,66 @@
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct vaxis float x float y float h float h-3;
+#N struct haxis float x float y float w float w-3;
+#N struct circle float x float y float color float h float h2;
+#N struct seg float x float y float dx float dy float w;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct l-arrow float x float y float z;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct u-arrow float x float y float z;
+#N struct d-arrow float x float y float z;
+#N struct v-seg float x float y float z float w;
+#N struct h-seg float x float y float z float w;
+#N struct rect float x float y float w float h;
+#N struct frame float x float y float w float h;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N canvas 553 272 294 185 10;
+#N canvas 49 0 341 311 fig 1;
+#X scalar u-curve-arrow 250 149 -12 -20 -35 19 \;;
+#X scalar vaxis 135 12 280 277 \;;
+#X scalar haxis 57 160 250 247 \;;
+#X scalar circle 255 160 0 3 -3 \;;
+#X text 258 151 1;
+#X scalar seg 135 159 104 -17 1 \;;
+#X scalar seg 255 159 -17 -17 1 \;;
+#X scalar circle 238 142 0 3 -3 \;;
+#X scalar xy-curve 255 159 1 \; -120 -120 \; -101.228 -118.523 \; -82.9178
+-114.127 \; -65.521 -106.921 \; -49.4657 -97.082 \; -35.1471 -84.8528
+\; -22.9179 -70.5342 \; -13.0792 -54.4788 \; -5.87321 -37.082 \; -1.4774
+-18.7721 \; 0 0 \; -1.4774 18.7721 \; -5.87321 37.082 \; -13.0792 54.4788
+\; -22.9179 70.5342 \; -35.1471 84.8528 \; -49.4657 97.082 \; -65.521
+106.921 \; -82.9178 114.127 \; -101.228 118.523 \; -120 120 \; \;;
+#X scalar seg 136 160 88 49 1 \;;
+#X scalar circle 225 210 0 3 -3 \;;
+#X text 63 153 real;
+#X text 66 33 imaginary;
+#X scalar xy-curve 174 178 1 \; 0 -14 \; 0 -14 \; -9 0 \; -9 -18 \;
+0 -4 \; \;;
+#X text 262 197 1-QZ;
+#X text 289 189 -1;
+#X text 218 178 QZ;
+#X text 234 172 -1;
+#X scalar circle 230 232 0 3 -3 \;;
+#X scalar seg 225 210 5 24 1 \;;
+#X text 287 86 Z-Q;
+#X scalar l-arrow 233 218 50 \;;
+#X text 228 97 Q;
+#X text 234 65 Z;
+#X text 182 105 r;
+#X coords 0 311 1 310 0 0 0;
+#X restore 51 61 pd fig;
+#X obj 47 89 templates;
+#N canvas 589 104 566 606 hash 0;
+#X coords 0 606 1 605 0 0 0;
+#X restore 205 62 pd hash;

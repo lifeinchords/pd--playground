@@ -1,0 +1,137 @@
+#N struct r-arrow float x float y float z;
+#N struct d-arrow float x float y float z;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct seg float x float y float dx float dy float w;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct vaxis float x float y float h float h-3;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct l-arrow float x float y float z;
+#N struct u-arrow float x float y float z;
+#N struct v-seg float x float y float z float w;
+#N struct h-seg float x float y float z float w;
+#N struct rect float x float y float w float h;
+#N struct haxis float x float y float w float w-3;
+#N struct frame float x float y float w float h;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N struct thickcircle float x float y float color float h float h2
+;
+#N canvas 117 16 464 200 10;
+#N canvas 99 350 353 227 fig 1;
+#N canvas 0 0 450 300 graph1 0;
+#X array array0103 101 float 9;
+#A 0 0.1 0.102329 0.104713 0.107152 0.109648 0.112202 0.114815 0.11749
+0.120226 0.123027 0.125893 0.128825 0.131826 0.134896 0.138038 0.141254
+0.144544 0.147911 0.151356 0.154882 0.158489 0.162181 0.165959 0.169824
+0.17378 0.177828 0.18197 0.186209 0.190546 0.194985 0.199526 0.204174
+0.20893 0.213796 0.218776 0.223872 0.229087 0.234423 0.239883 0.245471
+0.251189 0.257039 0.263027 0.269153 0.275423 0.281838 0.288403 0.295121
+0.301995 0.30903 0.316228 0.323594 0.331131 0.338844 0.346737 0.354813
+0.363078 0.371535 0.380189 0.389045 0.398107 0.40738 0.416869 0.426579
+0.436516 0.446684 0.457088 0.467735 0.47863 0.489779 0.501187 0.512861
+0.524808 0.537032 0.549541 0.562341 0.57544 0.588844 0.60256 0.616595
+0.630957 0.645654 0.660694 0.676083 0.691831 0.707946 0.724436 0.74131
+0.758577 0.776247 0.794328 0.81283 0.831764 0.851138 0.870964 0.891251
+0.91201 0.933254 0.954992 0.977238 1;
+#X coords 0 1 100 0 260 160 1;
+#X restore 62 20 graph;
+#X text 50 12 1;
+#X scalar r-arrow 291 209 -20 \;;
+#X scalar d-arrow 32 51 40 \;;
+#X text 13 92 ampli-;
+#X text 17 105 tude;
+#X text 50 187 -20;
+#X text 179 187 -10;
+#X text 317 188 0;
+#X text 50 172 0;
+#X text 37 156 0.1;
+#X text 44 211 WRONG FIGURE--- recreate MIDI graph here;
+#X text 233 201 db;
+#X restore 68 74 pd fig;
+#X obj 175 47 templates;
+#N canvas 574 92 890 657 make-table 0;
+#X obj 55 406 loadbang;
+#X obj 263 329 dbtorms;
+#X msg 51 101 bang;
+#X obj 51 130 t b b;
+#X obj 129 199 f;
+#X obj 167 199 + 1;
+#X msg 145 169 0;
+#X obj 51 159 until;
+#X obj 131 234 t f f;
+#X obj 59 339 tabwrite array-dbdb;
+#X msg 505 98 bang;
+#X obj 505 127 t b b;
+#X obj 583 196 f;
+#X obj 621 196 + 1;
+#X msg 599 166 0;
+#X obj 505 156 until;
+#X obj 585 231 t f f;
+#X obj 559 432 expr $f1 * $f1 * $f1 * $f1;
+#X obj 559 341 expr 1 + $f2 * ($f1 - 1);
+#X obj 705 253 loadbang;
+#X floatatom 703 309 0 0 0 0 - - -;
+#X msg 705 281 1;
+#X obj 559 385 max 0;
+#X obj 561 464 tabwrite array-4thpow;
+#X obj 51 232 sel 40;
+#X obj 503 226 sel 40;
+#X obj 559 300 / 40;
+#X obj 93 303 / 40;
+#X msg 43 465 \; pd-graph1 xlabel -0.03 0 10 20 30 40 \; pd-graph1
+ylabel -2 0.25 0.5 0.75 1;
+#X obj 259 262 swap;
+#X obj 262 355 tabwrite array0103;
+#X obj 261 191 scanner 100 20;
+#X obj 263 302 + 80;
+#X msg 54 535 \; pd-graph1 xticks 0 5 10 \, yticks 0 0.1 5;
+#X connect 1 0 30 0;
+#X connect 2 0 3 0;
+#X connect 3 0 7 0;
+#X connect 3 1 6 0;
+#X connect 4 0 5 0;
+#X connect 4 0 8 0;
+#X connect 4 0 24 0;
+#X connect 5 0 4 1;
+#X connect 6 0 4 1;
+#X connect 7 0 4 0;
+#X connect 8 0 27 0;
+#X connect 8 1 9 1;
+#X connect 10 0 11 0;
+#X connect 11 0 15 0;
+#X connect 11 1 14 0;
+#X connect 12 0 13 0;
+#X connect 12 0 16 0;
+#X connect 12 0 25 0;
+#X connect 13 0 12 1;
+#X connect 14 0 12 1;
+#X connect 15 0 12 0;
+#X connect 16 0 26 0;
+#X connect 16 1 23 1;
+#X connect 17 0 23 0;
+#X connect 18 0 22 0;
+#X connect 19 0 21 0;
+#X connect 20 0 18 1;
+#X connect 21 0 20 0;
+#X connect 22 0 17 0;
+#X connect 24 0 7 1;
+#X connect 25 0 15 1;
+#X connect 26 0 18 0;
+#X connect 27 0 9 0;
+#X connect 29 0 32 0;
+#X connect 29 1 30 1;
+#X connect 31 0 29 0;
+#X connect 31 1 29 1;
+#X connect 32 0 1 0;
+#X restore 174 78 pd make-table;

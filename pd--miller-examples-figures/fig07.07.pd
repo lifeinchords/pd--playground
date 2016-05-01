@@ -1,0 +1,56 @@
+#N struct frame float x float y float w float h;
+#N struct d-arrow float x float y float z;
+#N struct l-arrow float x float y float z;
+#N struct v-seg float x float y float z float w;
+#N struct h-seg float x float y float z float w;
+#N struct r-arrow float x float y float z;
+#N struct plus float x float y;
+#N struct times float x float y;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct seg float x float y float dx float dy float w;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct vaxis float x float y float h float h-3;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct u-arrow float x float y float z;
+#N struct rect float x float y float w float h;
+#N struct haxis float x float y float w float w-3;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N struct thickcircle float x float y float color float h float h2
+;
+#N struct minus float x float y;
+#N struct divide float x float y;
+#N canvas 585 179 294 185 10;
+#N canvas 359 89 348 181 fig 1;
+#X scalar frame 163 61 14 58 \;;
+#X scalar d-arrow 170 156 13 \;;
+#X text 162 -5 IN;
+#X text 165 84 d;
+#X scalar l-arrow 181 37 12 \;;
+#X scalar v-seg 143 19 126 1 \;;
+#X scalar d-arrow 170 120 16 \;;
+#X scalar h-seg 144 20 27 1 \;;
+#X scalar r-arrow 159 145 -16 \;;
+#X scalar d-arrow 170 48 13 \;;
+#X text 195 136 g;
+#X text 213 45 OUT;
+#X scalar v-seg 170 20 7 1 \;;
+#X scalar r-arrow 209 129 -38 \;;
+#X scalar plus 165 140 \;;
+#X scalar frame 160 136 20 19 \;;
+#X scalar frame 160 28 20 19 \;;
+#X scalar times 166 33 \;;
+#X coords 0 181 1 180 0 0 0;
+#X restore 51 61 pd fig;
+#X obj 56 88 templates;

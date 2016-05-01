@@ -1,0 +1,168 @@
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct vaxis float x float y float h float h-3;
+#N struct haxis float x float y float w float w-3;
+#N struct seg float x float y float dx float dy float w;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct v-seg float x float y float z float w;
+#N struct h-seg float x float y float z float w;
+#N struct u-arrow float x float y float z;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct thickcircle float x float y float color float h float h2
+;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct l-arrow float x float y float z;
+#N struct d-arrow float x float y float z;
+#N struct rect float x float y float w float h;
+#N struct frame float x float y float w float h;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N canvas 755 63 294 185 10;
+#N canvas 118 6 455 207 fig 1;
+#X scalar circle2 104 121 71 50 -71 -50 \;;
+#X scalar vaxis 105 46 150 147 \;;
+#X scalar haxis 24 121 160 157 \;;
+#X text 154 88 p;
+#X scalar seg 151 118 7 7 2 \;;
+#X scalar seg 151 125 7 -7 2 \;;
+#X scalar xy-curve 412 54 1 \; 0 -2 \; 2 0 \; 4 2 \; 6 0 \; 8 -2 \;
+10 0 \; 12 2 \; \;;
+#X scalar v-seg 415 47 7 1 \;;
+#X scalar v-seg 420 47 5 1 \;;
+#X text 217 147 0;
+#X text 85 179 (a);
+#X text 313 173 (b);
+#X scalar h-seg 220 64 200 1 \;;
+#X scalar u-arrow 220 184 -120 \;;
+#X scalar u-arrow 420 184 -120 \;;
+#X scalar xy-plot 200 24 1 \; 20 40 \; 24 53.6388 \; 28 64.7755 \;
+32 72.5822 \; 36 77.6677 \; 40 81.1636 \; 44 83.4494 \; 48 85.0266
+\; 52 86.1468 \; 56 86.965 \; 60 87.5776 \; 64 88.0457 \; 68 88.4124
+\; 72 88.7028 \; 76 88.9358 \; 80 89.1281 \; 84 89.286 \; 88 89.4151
+\; 92 89.5292 \; 96 89.6237 \; 100 89.7045 \; 104 89.7746 \; 108 89.8351
+\; 112 89.888 \; 116 89.9341 \; 120 89.9757 \; 124 90.0111 \; 128 90.043
+\; 132 90.0715 \; 136 90.0968 \; 140 90.119 \; 144 90.1398 \; 148 90.1581
+\; 152 90.1743 \; 156 90.189 \; 160 90.2022 \; 164 90.2139 \; 168 90.2245
+\; 172 90.234 \; 176 90.2424 \; 180 90.2504 \; 184 90.2563 \; 188 90.2621
+\; 192 90.2675 \; 196 90.2713 \; 200 90.2748 \; 204 90.2776 \; 208
+90.2798 \; 212 90.2814 \; 216 90.2823 \; 220 90.2931 \; \;;
+#X scalar thickcircle 170 121 999 5 -5 \;;
+#X coords 0 207 1 206 0 0 0;
+#X restore 51 61 pd fig;
+#X obj 47 89 templates;
+#N canvas 589 104 566 606 hash 0;
+#X coords 0 606 1 605 0 0 0;
+#X restore 205 62 pd hash;
+#N canvas 482 352 777 543 put-in-graph 0;
+#X obj 118 171 f;
+#X obj 164 172 + 1;
+#X obj 57 14 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 53 55 t b b;
+#X msg 140 118 0;
+#X obj 90 253 sel 1;
+#X obj 152 371 pack 0 0 0;
+#X msg 273 18 \; pd-xxx clear \; start pd-xxx;
+#X obj 339 452 + 40;
+#X obj 156 411 s xy-plot-point;
+#X msg 11 87 0;
+#X msg 47 86 1;
+#X floatatom 337 95 5 0 0 0 - - -;
+#X obj 154 279 f;
+#X obj 151 216 t b f;
+#X obj 152 305 t f f;
+#X obj 316 175 osc~;
+#X obj 331 314 env~ 8192;
+#X obj 338 396 dbtorms;
+#X floatatom 422 398 5 0 0 0 - - -;
+#X obj 75 417 print;
+#X floatatom 375 145 7 0 0 0 - - -;
+#X floatatom 391 450 5 0 0 0 - - -;
+#X obj 93 85 metro 250;
+#X obj 152 251 del 249;
+#X msg 107 29 \; pd dsp 1;
+#X msg 487 323 \; add-xy-plot 101 0 0 1;
+#X msg 527 426 \; start pd-xxx;
+#X msg 197 115 0.125;
+#X obj 407 186 loadbang;
+#X obj 339 428 * 100;
+#X obj 336 219 rpole~;
+#X msg 407 213 0.8;
+#X obj 332 284 *~ 0.8;
+#X obj 323 258 -~;
+#X obj 89 225 >= 50;
+#X msg 426 7 \; add-h-seg 20 40 200 1 \; add-u-arrow 20 160 -120 \;
+add-u-arrow 220 160 -120 \; add-xy-plot 51 0 0 1;
+#X obj 182 330 expr $f1*4+20;
+#X obj 362 249 *~ 0.2;
+#X obj 337 118 expr $f1*44100/100;
+#X connect 0 0 1 0;
+#X connect 0 0 14 0;
+#X connect 0 0 35 0;
+#X connect 1 0 0 1;
+#X connect 2 0 3 0;
+#X connect 3 0 11 0;
+#X connect 3 1 4 0;
+#X connect 3 1 25 0;
+#X connect 4 0 0 1;
+#X connect 5 0 10 0;
+#X connect 6 0 9 0;
+#X connect 6 0 20 0;
+#X connect 8 0 6 2;
+#X connect 10 0 23 0;
+#X connect 11 0 23 0;
+#X connect 12 0 39 0;
+#X connect 13 0 15 0;
+#X connect 14 0 24 0;
+#X connect 14 1 13 1;
+#X connect 14 1 12 0;
+#X connect 15 0 6 0;
+#X connect 15 1 37 0;
+#X connect 16 0 31 0;
+#X connect 16 0 34 0;
+#X connect 17 0 18 0;
+#X connect 18 0 30 0;
+#X connect 23 0 0 0;
+#X connect 23 0 28 0;
+#X connect 24 0 13 0;
+#X connect 28 0 16 1;
+#X connect 29 0 32 0;
+#X connect 30 0 8 0;
+#X connect 30 0 22 0;
+#X connect 31 0 38 0;
+#X connect 32 0 31 1;
+#X connect 33 0 17 0;
+#X connect 34 0 33 0;
+#X connect 35 0 5 0;
+#X connect 37 0 6 1;
+#X connect 38 0 34 1;
+#X connect 39 0 16 0;
+#X connect 39 0 21 0;
+#X restore 156 91 pd put-in-graph;
+#N canvas 14 393 579 261 xxx 0;
+#X scalar h-seg 264 60 200 1 \;;
+#X scalar u-arrow 264 180 -120 \;;
+#X scalar u-arrow 464 180 -120 \;;
+#X scalar xy-plot 244 20 1 \; 20 40 \; 24 53.6388 \; 28 64.7755 \;
+32 72.5822 \; 36 77.6677 \; 40 81.1636 \; 44 83.4494 \; 48 85.0266
+\; 52 86.1468 \; 56 86.965 \; 60 87.5776 \; 64 88.0457 \; 68 88.4124
+\; 72 88.7028 \; 76 88.9358 \; 80 89.1281 \; 84 89.286 \; 88 89.4151
+\; 92 89.5292 \; 96 89.6237 \; 100 89.7045 \; 104 89.7746 \; 108 89.8351
+\; 112 89.888 \; 116 89.9341 \; 120 89.9757 \; 124 90.0111 \; 128 90.043
+\; 132 90.0715 \; 136 90.0968 \; 140 90.119 \; 144 90.1398 \; 148 90.1581
+\; 152 90.1743 \; 156 90.189 \; 160 90.2022 \; 164 90.2139 \; 168 90.2245
+\; 172 90.234 \; 176 90.2424 \; 180 90.2504 \; 184 90.2563 \; 188 90.2621
+\; 192 90.2675 \; 196 90.2713 \; 200 90.2748 \; 204 90.2776 \; 208
+90.2798 \; 212 90.2814 \; 216 90.2823 \; 220 90.2931 \; \;;
+#X coords 0 261 1 260 0 0 0;
+#X restore 44 119 pd xxx;

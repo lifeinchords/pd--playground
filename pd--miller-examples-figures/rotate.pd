@@ -1,0 +1,18 @@
+#N canvas 0 0 450 300 10;
+#X obj 71 77 inlet;
+#X obj 132 77 inlet;
+#X obj 186 77 inlet;
+#X obj 87 116 pack 0 0 0;
+#X obj 85 139 t l l;
+#X obj 85 213 expr $f1*cos($f3)-$f2*sin($f3);
+#X obj 115 166 expr $f1*sin($f3)+$f2*cos($f3);
+#X obj 115 191 outlet;
+#X obj 85 236 outlet;
+#X connect 0 0 3 0;
+#X connect 1 0 3 1;
+#X connect 2 0 3 2;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;

@@ -1,0 +1,54 @@
+#N struct frame float x float y float w float h;
+#N struct d-arrow float x float y float z;
+#N struct l-arrow float x float y float z;
+#N struct h-seg float x float y float z float w;
+#N struct times float x float y;
+#N struct minus float x float y;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct seg float x float y float dx float dy float w;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct vaxis float x float y float h float h-3;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct u-arrow float x float y float z;
+#N struct v-seg float x float y float z float w;
+#N struct rect float x float y float w float h;
+#N struct haxis float x float y float w float w-3;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N struct thickcircle float x float y float color float h float h2
+;
+#N struct plus float x float y;
+#N struct divide float x float y;
+#N canvas 585 179 294 185 10;
+#N canvas 490 108 349 184 fig 1;
+#X scalar frame 168 112 14 32 \;;
+#X scalar d-arrow 160 39 13 \;;
+#X text 167 -5 IN;
+#X scalar l-arrow 185 90 12 \;;
+#X scalar d-arrow 175 145 25 \;;
+#X scalar d-arrow 175 101 10 \;;
+#X text 149 144 OUT;
+#X text 183 48 d=1;
+#X scalar d-arrow 150 70 87 \;;
+#X scalar h-seg 150 157 25 1 \;;
+#X text 199 86 Q;
+#X scalar frame 164 81 20 19 \;;
+#X scalar times 170 86 \;;
+#X scalar minus 156 55 \;;
+#X scalar frame 141 52 41 17 \;;
+#X scalar d-arrow 175 70 10 \;;
+#X coords 0 184 1 183 0 0 0;
+#X restore 51 61 pd fig;
+#X obj 56 88 templates;

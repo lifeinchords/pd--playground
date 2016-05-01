@@ -1,0 +1,44 @@
+#N struct haxis float x float y float w float w-3;
+#N struct vaxis float x float y float h float h-3;
+#N struct seg float x float y float dx float dy float w;
+#N struct circle float x float y float color float h float h2;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct l-arrow float x float y float z;
+#N struct u-arrow float x float y float z;
+#N struct d-arrow float x float y float z;
+#N struct v-seg float x float y float z float w;
+#N struct h-seg float x float y float z float w;
+#N struct rect float x float y float w float h;
+#N struct frame float x float y float w float h;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N canvas 298 363 294 185 10;
+#N canvas 108 24 369 174 fig 1;
+#X scalar haxis 110 81 150 147 \;;
+#X scalar vaxis 182 10 150 147 \;;
+#X scalar seg 182 81 63 63 1 \;;
+#X scalar circle 247 145 0 3 -3 \;;
+#X text 246 94 a;
+#X text 170 16 b;
+#X scalar xy-curve 212 80 1 \; 0 0 \; -0.369349 4.69303 \; -1.4683
+9.2705 \; -3.2698 13.6197 \; -5.72948 17.6335 \; -8.78678 21.2132 \;
+\;;
+#X text 255 23 Z=a+bi;
+#X text 211 73 arg(Z);
+#X text 206 33 |Z|;
+#X coords 0 174 1 173 0 0 0;
+#X restore 51 61 pd fig;
+#X obj 47 89 templates;

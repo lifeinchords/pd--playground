@@ -1,0 +1,44 @@
+#N struct rect float x float y float w float h;
+#N canvas 300 159 834 865 12;
+#X text 319 405 CONTROLLING OUTPUT AMPLITUDE;
+#X obj 90 527 +~;
+#X text 166 562 <-- this is a subwindow--right click on it;
+#X text 207 582 and select "open" to see inside.;
+#X text 88 786 The output control automatically starts DSP whenever
+you touch the level control. Hitting "mute" toggles between the current
+level and zero.;
+#X obj 90 564 output~;
+#X text 441 848 updated for Pd version 0.36;
+#X text 89 635 In this and subsequent patches \, we'll use a subwindow
+\, "output" \, to control overall amplitude. The amplitudes are in
+decibels \, with 100 being full blast. In this example \, you can't
+actually push the output amplitude past 90 or so without clipping.
+You'll know you're clipping if \, instead of an A major chord \, you
+hear a single \, distorted tone two octaves down. The clipping happens
+at Pd's last stage of audio output. Audio signals internal to Pd have
+essentially no level limit.;
+#X scalar rect 98 285 1 7 \;;
+#X obj 96 268 +~;
+#X obj 96 223 +~;
+#X obj 190 222 +~;
+#X obj 190 179 osc~ 440;
+#X obj 96 179 osc~ 330;
+#X obj 112 200 osc~ 330.2;
+#X obj 206 200 osc~ 440.33;
+#X obj 290 223 +~;
+#X obj 290 179 osc~ 587;
+#X obj 305 200 osc~ 587.25;
+#X obj 96 246 +~;
+#X connect 1 0 5 0;
+#X connect 1 0 5 1;
+#X connect 9 0 1 0;
+#X connect 10 0 19 0;
+#X connect 11 0 19 1;
+#X connect 12 0 11 0;
+#X connect 13 0 10 0;
+#X connect 14 0 10 1;
+#X connect 15 0 11 1;
+#X connect 16 0 9 1;
+#X connect 17 0 16 0;
+#X connect 18 0 16 1;
+#X connect 19 0 9 0;

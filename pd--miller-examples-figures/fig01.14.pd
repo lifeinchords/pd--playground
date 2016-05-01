@@ -1,0 +1,82 @@
+#N struct rect float x float y float w float h;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct seg float x float y float dx float dy float w;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct vaxis float x float y float h float h-3;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct l-arrow float x float y float z;
+#N struct u-arrow float x float y float z;
+#N struct d-arrow float x float y float z;
+#N struct v-seg float x float y float z float w;
+#N struct h-seg float x float y float z float w;
+#N struct haxis float x float y float w float w-3;
+#N struct frame float x float y float w float h;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N struct thickcircle float x float y float color float h float h2
+;
+#N struct times float x float y;
+#N struct plus float x float y;
+#N struct minus float x float y;
+#N struct divide float x float y;
+#N canvas 86 84 464 200 10;
+#N canvas 117 304 369 246 fig 1;
+#X floatatom 30 9 0 0 0 0 - - -;
+#X obj 30 31 mtof;
+#X text 57 10 <-- choose a pitch;
+#X obj 30 87 osc~;
+#X obj 64 63 * 2;
+#X obj 64 87 osc~;
+#X obj 113 87 osc~;
+#X obj 113 63 * 3;
+#X obj 161 88 osc~;
+#X obj 161 64 * 4;
+#X obj 113 112 *~ 0.2;
+#X obj 30 194 +~;
+#X obj 64 193 *~;
+#X obj 99 194 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 64 144 +~;
+#X obj 64 168 +~;
+#X text 187 66 frequencies of harmonics;
+#X text 195 89 four oscillators;
+#X text 209 114 adjust amplitudes;
+#X text 99 167 add the three overtones together;
+#X obj 64 112 *~ 0.1;
+#X obj 161 112 *~ 0.5;
+#X text 119 193 <-- overtones ON/OFF;
+#X scalar rect 32 211 1 7 \;;
+#X text 15 218 (OUT);
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 0 4 0;
+#X connect 1 0 7 0;
+#X connect 1 0 9 0;
+#X connect 3 0 11 0;
+#X connect 4 0 5 0;
+#X connect 5 0 20 0;
+#X connect 6 0 10 0;
+#X connect 7 0 6 0;
+#X connect 8 0 21 0;
+#X connect 9 0 8 0;
+#X connect 10 0 14 1;
+#X connect 12 0 11 1;
+#X connect 13 0 12 1;
+#X connect 14 0 15 0;
+#X connect 15 0 12 0;
+#X connect 20 0 14 0;
+#X connect 21 0 15 1;
+#X restore 68 74 pd fig;
+#X obj 68 30 templates;

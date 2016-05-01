@@ -1,0 +1,115 @@
+#N struct frame float x float y float w float h;
+#N struct h-seg float x float y float z float w;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N struct d-arrow float x float y float z;
+#N struct times float x float y;
+#N struct l-arrow float x float y float z;
+#N struct divide float x float y;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct seg float x float y float dx float dy float w;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct vaxis float x float y float h float h-3;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct u-arrow float x float y float z;
+#N struct v-seg float x float y float z float w;
+#N struct rect float x float y float w float h;
+#N struct haxis float x float y float w float w-3;
+#N struct thickcircle float x float y float color float h float h2
+;
+#N struct plus float x float y;
+#N struct minus float x float y;
+#N canvas 139 160 329 179 10;
+#N canvas 489 119 239 381 fig 1;
+#X scalar frame 21 295 102 40 \;;
+#X scalar frame 95 223 24 17 \;;
+#X scalar h-seg 74 253 31 1 \;;
+#X scalar h-seg 152 228 41 1 \;;
+#X scalar y-plot 152 212 1 \; 26.4755 \; 26.4755 \; 27.4755 \; 28.4755
+\; 29.4755 \; 30.4755 \; 31.4755 \; 31.4755 \; 31.4755 \; 33.4755 \;
+30.4755 \; 29.4755 \; 26.4755 \; 25.4755 \; 24.4755 \; 24.4755 \; 23.4755
+\; 23.4755 \; 23.4755 \; 23.4755 \; 22.4755 \; 22.4755 \; 22.4755 \;
+22.4755 \; 22.4755 \; 21.4755 \; 21.4755 \; 21.4755 \; 21.4755 \; 21.4755
+\; 21.4755 \; 20.4755 \; 20.4755 \; 20.4755 \; 19.4755 \; 19.4755 \;
+19.4755 \; 19.4755 \; 19.4755 \; 19.4755 \; 19.4755 \; \;;
+#X scalar d-arrow 72 278 16 \;;
+#X scalar d-arrow 71 336 14 \;;
+#X scalar frame 59 259 31 18 \;;
+#X text 66 106 FT;
+#X scalar frame 102 148 50 32 \;;
+#X scalar d-arrow 146 212 46 \;;
+#X scalar d-arrow 127 181 12 \;;
+#X scalar frame 55 124 38 17 \;;
+#X text 61 241 iFT;
+#X text 27 51 extract and;
+#X text 27 67 shape windows;
+#X text 63 14 IN;
+#X text 95 141 |Z|;
+#X scalar d-arrow 105 241 12 \;;
+#X text 130 97 NOISE;
+#X text 129 110 FLOOR;
+#X scalar d-arrow 107 212 11 \;;
+#X scalar frame 100 194 53 17 \;;
+#X text 52 272 overlap;
+#X text 51 287 and add;
+#X scalar d-arrow 73 175 84 \;;
+#X scalar d-arrow 74 142 12 \;;
+#X scalar frame 48 77 57 34 \;;
+#X scalar d-arrow 74 112 12 \;;
+#X text 157 203 threshold;
+#X text 157 216 function;
+#X scalar d-arrow 74 62 14 \;;
+#X text 64 320 OUT;
+#X scalar frame 63 155 20 19 \;;
+#X scalar times 69 160 \;;
+#X scalar l-arrow 84 165 19 \;;
+#X scalar y-plot 107 155 1 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0.95238
+\; 3.33333 \; 5.18518 \; 6.66667 \; 7.87879 \; 8.88889 \; 9.74359 \;
+10.4762 \; 11.1111 \; 11.6667 \; 12.1569 \; 12.5926 \; 12.9825 \; 13.3333
+\; 13.6508 \; 13.9394 \; 14.2029 \; 14.4444 \; 14.6667 \; 14.8718 \;
+15.0617 \; 15.2381 \; 15.4023 \; 15.5556 \; 15.6989 \; 15.8333 \; 15.9596
+\; 16.0784 \; 16.1905 \; 16.2963 \; 16.3964 \; 16.4912 \; 16.6667 \;
+\;;
+#X scalar divide 122 197 \;;
+#X coords 0 381 1 380 0 0 0;
+#X restore 51 61 pd fig;
+#X obj 170 42 templates;
+#N canvas 14 235 422 219 z 1;
+#X scalar y-plot 50 100 1 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0.95238
+\; 3.33333 \; 5.18518 \; 6.66667 \; 7.87879 \; 8.88889 \; 9.74359 \;
+10.4762 \; 11.1111 \; 11.6667 \; 12.1569 \; 12.5926 \; 12.9825 \; 13.3333
+\; 13.6508 \; 13.9394 \; 14.2029 \; 14.4444 \; 14.6667 \; 14.8718 \;
+15.0617 \; 15.2381 \; 15.4023 \; 15.5556 \; 15.6989 \; 15.8333 \; 15.9596
+\; 16.0784 \; 16.1905 \; 16.2963 \; 16.3964 \; 16.4912 \; 16.6667 \;
+\;;
+#X coords 0 219 1 218 0 0 0;
+#X restore 54 89 pd z;
+#N canvas 692 97 427 522 make-fig 0;
+#X msg 129 16 \; start pd-z \;;
+#X msg 26 22 \; pd-z clear \; start pd-z;
+#X obj 104 280 pack;
+#X msg 104 305 \; y-plot-point \$1 \$2 \;;
+#X msg 246 17 \; pd-z vis 1 \;;
+#X msg 104 132 \; add-y-plot 40 50 100 1 \;;
+#X text 100 350 threshold function;
+#X obj 152 212 expr 1-1/max($f1 \, 1);
+#X obj 104 164 scanner 40 6;
+#X obj 155 239 * 20;
+#X connect 2 0 3 0;
+#X connect 7 0 9 0;
+#X connect 8 0 2 0;
+#X connect 8 1 7 0;
+#X connect 9 0 2 1;
+#X restore 170 83 pd make-fig;

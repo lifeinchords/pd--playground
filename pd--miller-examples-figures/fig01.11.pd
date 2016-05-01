@@ -1,0 +1,31 @@
+#N canvas 6 2 454 494 10;
+#X obj 63 104 osc~ 440;
+#X obj 63 154 dac~;
+#X obj 63 129 *~ 0.05;
+#X text 151 11 MAKING A SINE WAVE;
+#X text 21 196 Audio computation can be turned on and off by sending
+messages to the global "pd" object as follows:;
+#X msg 55 244 \; pd dsp 1;
+#X msg 159 244 \; pd dsp 0;
+#X text 73 280 ON;
+#X text 177 280 OFF;
+#X text 19 366 When DSP is on \, you should hear a tone whose pitch
+is A 440 and whose amplitude is 0.05. If instead you are greeted with
+silence \, you might want to read the HTML documentation on setting
+up audio.;
+#X text 18 426 In general when you start a work session with Pd \,
+you will want to choose "test audio and MIDI" from the help window
+\, which opens a more comprehensive test patch than this one.;
+#X text 245 252 <-- click these;
+#X text 132 106 440 Hz. sine wave at full blast;
+#X text 139 130 reduce amplitude to 0.05;
+#X text 132 156 send to the audio output device;
+#X text 22 31 Audio computation in Pd is done using "tilde objects"
+such as the three below. They use continuous audio streams to intercommunicate
+\, and also communicate with other ("control") Pd objects using messages.
+;
+#X text 19 308 You should see the Pd ("main") window change to reflect
+whether audio is on or off. You can also turn audio on and off using
+the "audio" menu \, but the buttons are provided as a shortcut.;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

@@ -1,0 +1,105 @@
+#N struct d-arrow float x float y float z;
+#N struct frame float x float y float w float h;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N struct l-arrow float x float y float z;
+#N struct times float x float y float x1 float x2;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct seg float x float y float dx float dy float w;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct vaxis float x float y float h float h-3;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct u-arrow float x float y float z;
+#N struct v-seg float x float y float z float w;
+#N struct h-seg float x float y float z float w;
+#N struct rect float x float y float w float h;
+#N struct haxis float x float y float w float w-3;
+#N struct thickcircle float x float y float color float h float h2
+;
+#N struct plus float x float y;
+#N struct minus float x float y;
+#N struct divide float x float y;
+#N canvas 280 428 567 323 10;
+#N canvas 797 66 518 448 buildit 0;
+#X msg 31 22 \; pd-fig clear;
+#X obj 186 156 until;
+#X obj 188 131 t b b;
+#X obj 220 201 f;
+#X msg 235 128 0;
+#X obj 294 201 + 1;
+#X obj 294 228 sel 50;
+#X obj 103 255 print;
+#X obj 188 63 r add-pts;
+#X obj 210 270 t f f;
+#X obj 196 345 pack;
+#X msg 281 16 \; start pd-fig \; add-frame 30 30 60 60 \; add-y-plot
+50 35 60 1 \; add-pts bang;
+#X msg 192 375 \; y-plot-point \$1 \$2 \;;
+#X obj 256 297 expr 25 * sin($f1*4*3.14/50);
+#X msg 32 116 \; start pd-fig \; add-d-arrow 70 40 40;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 1 4 0;
+#X connect 3 0 5 0;
+#X connect 3 0 9 0;
+#X connect 4 0 3 1;
+#X connect 5 0 6 0;
+#X connect 5 0 3 1;
+#X connect 6 0 1 1;
+#X connect 8 0 2 0;
+#X connect 9 0 10 0;
+#X connect 9 1 13 0;
+#X connect 10 0 12 0;
+#X connect 13 0 10 1;
+#X restore 191 48 pd buildit;
+#N canvas 661 112 330 227 fig 1;
+#X scalar d-arrow 85 98 22 \;;
+#X scalar d-arrow 85 180 18 \;;
+#X scalar frame 56 120 60 60 \;;
+#X scalar y-plot 61 150 1 \; 0 \; 6.21416 \; 12.0383 \; 17.1067 \;
+21.1014 \; 23.7715 \; 24.9495 \; 24.5613 \; 22.6315 \; 19.2811 \; 14.7204
+\; 9.23568 \; 3.17125 \; -3.09224 \; -9.16164 \; -14.656 \; -19.2303
+\; -22.5976 \; -24.5464 \; -24.9544 \; -23.796 \; -21.144 \; -17.1647
+\; -12.108 \; -6.29126 \; -0.0796273 \; 6.137 \; 11.9684 \; 17.0486
+\; 21.0586 \; 23.7467 \; 24.9443 \; 24.5761 \; 22.6652 \; 19.3317 \;
+14.7847 \; 9.30962 \; 3.25022 \; -3.01323 \; -9.08751 \; -14.5914 \;
+-19.1793 \; -22.5634 \; -24.5312 \; -24.9591 \; -23.8203 \; -21.1863
+\; -17.2225 \; -12.1776 \; -6.36831 \; \;;
+#X text 79 196 (a);
+#X text 73 129 OUT;
+#X text 54 11 FREQUENCY;
+#X text 204 172 OUT;
+#X text 208 199 (b);
+#X scalar frame 205 77 24 19 \;;
+#X scalar l-arrow 230 87 25 \;;
+#X text 259 132 y[n];
+#X scalar d-arrow 216 55 22 \;;
+#X scalar times 212 82 0 0 \;;
+#X scalar d-arrow 216 97 22 \;;
+#X scalar d-arrow 216 179 18 \;;
+#X scalar frame 187 119 60 60 \;;
+#X scalar y-plot 192 149 1 \; 0 \; 6.21416 \; 12.0383 \; 17.1067 \;
+21.1014 \; 23.7715 \; 24.9495 \; 24.5613 \; 22.6315 \; 19.2811 \; 14.7204
+\; 9.23568 \; 3.17125 \; -3.09224 \; -9.16164 \; -14.656 \; -19.2303
+\; -22.5976 \; -24.5464 \; -24.9544 \; -23.796 \; -21.144 \; -17.1647
+\; -12.108 \; -6.29126 \; -0.0796273 \; 6.137 \; 11.9684 \; 17.0486
+\; 21.0586 \; 23.7467 \; 24.9443 \; 24.5761 \; 22.6652 \; 19.3317 \;
+14.7847 \; 9.30962 \; 3.25022 \; -3.01323 \; -9.08751 \; -14.5914 \;
+-19.1793 \; -22.5634 \; -24.5312 \; -24.9591 \; -23.8203 \; -21.1863
+\; -17.2225 \; -12.1776 \; -6.36831 \; \;;
+#X text 185 12 FREQUENCY;
+#X coords 0 227 1 226 0 0 0;
+#X restore 51 61 pd fig;
+#X obj 193 82 templates;

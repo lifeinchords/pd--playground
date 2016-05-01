@@ -1,0 +1,48 @@
+#N canvas 91 193 503 325 10;
+#X obj 6 76 *~;
+#X obj 6 52 inlet~;
+#X obj 6 97 rfft~;
+#X obj 35 76 tabreceive~ \$0-hann;
+#X obj 6 222 *~;
+#X obj 36 222 *~;
+#X obj 6 7 block~ 512 4;
+#X obj 52 126 tabreceive~ \$0-gain;
+#X obj 53 151 *~;
+#X obj 6 271 *~;
+#X obj 37 271 tabreceive~ \$0-hann;
+#X obj 53 195 /~ 768;
+#X obj 54 174 *~;
+#X obj 6 246 rifft~;
+#X obj 6 295 outlet~;
+#X text 103 8 512-sample block \, 4-fold overlap (hop size 128).;
+#X text 59 43 inlet~ now takes care of buffering and shifting for overlapped
+windowing.;
+#X text 177 77 Hann window as before;
+#X text 54 98 real FT as before;
+#X text 199 128 read "gain" from a table in parent patch;
+#X text 83 153 raise to 4th power (a more convenient scale);
+#X text 102 194 renormalize: divide by window size 512 and an additional
+factor of 3/2 to correct for twice-Hann-windowed overlap-add in outlet~
+below.;
+#X text 175 271 Hann window again on output.;
+#X text 56 246 real inverse fast Fourier transform (not normalized).
+;
+#X text 63 295 outlet~ does overlap-adding because of block~ setting
+above.;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 2 1 5 0;
+#X connect 3 0 0 1;
+#X connect 4 0 13 0;
+#X connect 5 0 13 1;
+#X connect 7 0 8 0;
+#X connect 7 0 8 1;
+#X connect 8 0 12 0;
+#X connect 8 0 12 1;
+#X connect 9 0 14 0;
+#X connect 10 0 9 1;
+#X connect 11 0 4 1;
+#X connect 11 0 5 1;
+#X connect 12 0 11 0;
+#X connect 13 0 9 0;

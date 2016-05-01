@@ -1,0 +1,94 @@
+#N struct d-arrow float x float y float z;
+#N struct h-seg float x float y float z float w;
+#N struct v-seg float x float y float z float w;
+#N struct frame float x float y float w float h;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct plus float x float y;
+#N struct times float x float y;
+#N struct seg float x float y float dx float dy float w;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct vaxis float x float y float h float h-3;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct l-arrow float x float y float z;
+#N struct u-arrow float x float y float z;
+#N struct rect float x float y float w float h;
+#N struct haxis float x float y float w float w-3;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N struct thickcircle float x float y float color float h float h2
+;
+#N struct minus float x float y;
+#N struct divide float x float y;
+#N canvas 537 172 294 185 10;
+#N canvas 353 0 337 244 fig 1;
+#X scalar d-arrow 35 119 77 \;;
+#X scalar d-arrow 40 29 23 \;;
+#X text 38 23 IN;
+#X scalar d-arrow 44 119 12 \;;
+#X scalar d-arrow 35 70 31 \;;
+#X text 39 98 c;
+#X scalar d-arrow 59 119 77 \;;
+#X scalar d-arrow 68 119 12 \;;
+#X scalar d-arrow 45 70 14 \;;
+#X scalar h-seg 46 84 18 1 \;;
+#X scalar v-seg 63 84 17 1 \;;
+#X scalar h-seg 36 172 59 1 \;;
+#X scalar h-seg 60 161 60 1 \;;
+#X scalar d-arrow 96 119 53 \;;
+#X scalar d-arrow 101 29 22 \;;
+#X scalar d-arrow 107 119 12 \;;
+#X scalar d-arrow 96 70 31 \;;
+#X scalar d-arrow 120 119 42 \;;
+#X scalar d-arrow 129 119 12 \;;
+#X scalar d-arrow 106 70 14 \;;
+#X scalar h-seg 107 84 18 1 \;;
+#X scalar v-seg 124 84 17 1 \;;
+#X text 125 99 c;
+#X scalar d-arrow 222 53 23 \;;
+#X text 231 56 IN;
+#X scalar d-arrow 256 52 24 \;;
+#X text 229 199 OUT;
+#X scalar d-arrow 222 145 23 \;;
+#X scalar d-arrow 256 145 24 \;;
+#X text 73 10 (a);
+#X text 229 10 (b);
+#X scalar frame 201 77 78 67 \;;
+#X text 221 111 c;
+#X text 252 137 c;
+#X scalar xy-curve 271 111 1 \; -3.91547 -24.7213 \; -0.984931 -12.5147
+\; 0 0 \; -0.984931 12.5147 \; -3.91547 24.7213 \; \;;
+#X scalar xy-curve 370 111 1 \; -156.084 24.7215 \; -159.015 12.5149
+\; -160 0.000202815 \; -159.015 -12.5145 \; -156.085 -24.7211 \; \;
+;
+#X text 221 137 s;
+#X text 245 111 -s;
+#X text 58 218 OUT;
+#X scalar plus 35 55 \;;
+#X scalar frame 30 101 18 17 \;;
+#X scalar times 34 105 \;;
+#X scalar frame 55 101 18 17 \;;
+#X scalar times 59 105 \;;
+#X scalar frame 91 101 18 17 \;;
+#X scalar times 95 105 \;;
+#X scalar frame 116 101 18 17 \;;
+#X scalar times 120 105 \;;
+#X scalar frame 31 52 18 17 \;;
+#X scalar plus 96 55 \;;
+#X scalar frame 92 52 18 17 \;;
+#X text 62 98 -s;
+#X text 102 99 s;
+#X coords 0 244 1 243 0 0 0;
+#X restore 51 61 pd fig;
+#X obj 56 88 templates;

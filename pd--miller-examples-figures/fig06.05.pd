@@ -1,0 +1,787 @@
+#N struct haxis float x float y float w float w-3;
+#N struct vaxis float x float y float h float h-3;
+#N struct rect float x float y float w float h;
+#N struct v-seg float x float y float z float w;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct l-arrow float x float y float z;
+#N struct u-arrow float x float y float z;
+#N struct d-arrow float x float y float z;
+#N struct h-seg float x float y float z float w;
+#N struct frame float x float y float w float h;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N canvas 541 115 329 179 10;
+#N canvas 38 230 302 206 fig 1;
+#X scalar haxis 15 152 260 257 \;;
+#X scalar vaxis 137 112 80 77 \;;
+#X scalar rect 40 151 1 2 \;;
+#X scalar rect 43 151 1 2 \;;
+#X scalar rect 46 151 1 2 \;;
+#X scalar rect 49 151 1 2 \;;
+#X scalar rect 52 151 1 2 \;;
+#X scalar rect 55 151 1 2 \;;
+#X scalar rect 58 151 1 2 \;;
+#X scalar rect 61 151 1 2 \;;
+#X scalar rect 64 151 1 2 \;;
+#X scalar rect 67 151 1 2 \;;
+#X scalar rect 70 151 1 2 \;;
+#X scalar rect 73 151 1 2 \;;
+#X scalar rect 76 151 1 2 \;;
+#X scalar rect 79 151 1 2 \;;
+#X scalar rect 82 151 1 2 \;;
+#X scalar rect 85 151 1 2 \;;
+#X scalar rect 88 151 1 2 \;;
+#X scalar rect 91 152 1 -0.159772 \;;
+#X scalar rect 94 152 1 -0.291303 \;;
+#X scalar rect 97 152 1 0.328808 \;;
+#X scalar rect 100 152 1 2.07112 \;;
+#X scalar rect 103 152 1 4.35897 \;;
+#X scalar rect 106 152 1 5.70333 \;;
+#X scalar rect 109 152 1 4.47189 \;;
+#X scalar rect 112 152 1 7.54985e-07 \;;
+#X scalar rect 115 152 1 -6.63963 \;;
+#X scalar rect 118 152 1 -12.7744 \;;
+#X scalar rect 121 152 1 -15.2569 \;;
+#X scalar rect 124 152 1 -12.071 \;;
+#X scalar rect 127 152 1 -3.57289 \;;
+#X scalar rect 130 152 1 7.36256 \;;
+#X scalar rect 133 152 1 16.4698 \;;
+#X scalar rect 136 152 1 20 \;;
+#X scalar rect 139 152 1 16.4696 \;;
+#X scalar rect 142 152 1 7.36239 \;;
+#X scalar rect 145 152 1 -3.57303 \;;
+#X scalar rect 148 152 1 -12.0711 \;;
+#X scalar rect 151 152 1 -15.2568 \;;
+#X scalar rect 154 152 1 -12.7743 \;;
+#X scalar rect 157 152 1 -6.6395 \;;
+#X scalar rect 160 152 1 8.59499e-05 \;;
+#X scalar rect 163 152 1 4.4719 \;;
+#X scalar rect 166 152 1 5.70328 \;;
+#X scalar rect 169 152 1 4.35889 \;;
+#X scalar rect 172 152 1 2.07106 \;;
+#X scalar rect 175 152 1 0.328785 \;;
+#X scalar rect 178 152 1 -0.291296 \;;
+#X scalar rect 181 152 1 -0.159759 \;;
+#X scalar rect 184 151 1 2 \;;
+#X scalar rect 187 151 1 2 \;;
+#X scalar rect 190 151 1 2 \;;
+#X scalar rect 193 151 1 2 \;;
+#X scalar rect 196 151 1 2 \;;
+#X scalar rect 199 151 1 2 \;;
+#X scalar rect 202 151 1 2 \;;
+#X scalar rect 205 151 1 2 \;;
+#X scalar rect 208 151 1 2 \;;
+#X scalar rect 211 151 1 2 \;;
+#X scalar rect 214 151 1 2 \;;
+#X scalar rect 217 151 1 2 \;;
+#X scalar rect 220 151 1 2 \;;
+#X scalar rect 223 151 1 2 \;;
+#X scalar rect 226 151 1 2 \;;
+#X scalar rect 229 151 1 2 \;;
+#X scalar haxis 14 54 260 257 \;;
+#X scalar vaxis 136 14 80 77 \;;
+#X scalar rect 39 54 1 4 \;;
+#X scalar rect 42 54 1 3.3323 \;;
+#X scalar rect 45 54 1 1.54259 \;;
+#X scalar rect 48 54 1 -0.79404 \;;
+#X scalar rect 51 54 1 -2.91726 \;;
+#X scalar rect 54 54 1 -4.11763 \;;
+#X scalar rect 57 54 1 -3.96264 \;;
+#X scalar rect 60 54 1 -2.44418 \;;
+#X scalar rect 63 54 1 3.89423e-05 \;;
+#X scalar rect 66 54 1 2.60298 \;;
+#X scalar rect 69 54 1 4.49454 \;;
+#X scalar rect 72 54 1 4.97508 \;;
+#X scalar rect 75 54 1 3.75585 \;;
+#X scalar rect 78 54 1 1.08972 \;;
+#X scalar rect 81 54 1 -2.2576 \;;
+#X scalar rect 84 54 1 -5.20314 \;;
+#X scalar rect 87 54 1 -6.66666 \;;
+#X scalar rect 90 54 1 -5.93063 \;;
+#X scalar rect 93 54 1 -2.93258 \;;
+#X scalar rect 96 54 1 1.61277 \;;
+#X scalar rect 99 54 1 6.32867 \;;
+#X scalar rect 102 54 1 9.53511 \;;
+#X scalar rect 105 54 1 9.78238 \;;
+#X scalar rect 108 54 1 6.41828 \;;
+#X scalar rect 111 54 1 9.5218e-07 \;;
+#X scalar rect 114 54 1 -7.64207 \;;
+#X scalar rect 117 54 1 -13.8196 \;;
+#X scalar rect 120 54 1 -15.8683 \;;
+#X scalar rect 123 54 1 -12.2735 \;;
+#X scalar rect 126 54 1 -3.59228 \;;
+#X scalar rect 129 54 1 7.3706 \;;
+#X scalar rect 132 54 1 16.4709 \;;
+#X scalar rect 135 54 1 20 \;;
+#X scalar rect 138 54 1 16.4708 \;;
+#X scalar rect 141 54 1 7.37045 \;;
+#X scalar rect 144 54 1 -3.59244 \;;
+#X scalar rect 147 54 1 -12.2736 \;;
+#X scalar rect 150 54 1 -15.8683 \;;
+#X scalar rect 153 54 1 -13.8195 \;;
+#X scalar rect 156 54 1 -7.64198 \;;
+#X scalar rect 159 54 1 0.0001084 \;;
+#X scalar rect 162 54 1 6.41836 \;;
+#X scalar rect 165 54 1 9.78243 \;;
+#X scalar rect 168 54 1 9.53509 \;;
+#X scalar rect 171 54 1 6.32861 \;;
+#X scalar rect 174 54 1 1.6127 \;;
+#X scalar rect 177 54 1 -2.93264 \;;
+#X scalar rect 180 54 1 -5.93066 \;;
+#X scalar rect 183 54 1 -6.66665 \;;
+#X scalar rect 186 54 1 -5.2031 \;;
+#X scalar rect 189 54 1 -2.25755 \;;
+#X scalar rect 192 54 1 1.08976 \;;
+#X scalar rect 195 54 1 3.75588 \;;
+#X scalar rect 198 54 1 4.97508 \;;
+#X scalar rect 201 54 1 4.49451 \;;
+#X scalar rect 204 54 1 2.60294 \;;
+#X scalar rect 207 54 1 3.42067e-07 \;;
+#X scalar rect 210 54 1 -2.44421 \;;
+#X scalar rect 213 54 1 -3.96265 \;;
+#X scalar rect 216 54 1 -4.11761 \;;
+#X scalar rect 219 54 1 -2.91723 \;;
+#X scalar rect 222 54 1 -0.794005 \;;
+#X scalar rect 225 54 1 1.54263 \;;
+#X scalar rect 228 54 1 3.33232 \;;
+#X text 80 24 (a);
+#X text 79 116 (b);
+#X scalar v-seg 39 147 10 1 \;;
+#X scalar v-seg 231 147 10 1 \;;
+#X scalar v-seg 230 50 10 1 \;;
+#X scalar v-seg 39 50 10 1 \;;
+#X coords 0 206 1 205 0 0 0;
+#X restore 51 61 pd fig;
+#X obj 170 42 templates;
+#N canvas 440 72 803 650 make-tables 0;
+#N canvas 0 0 450 300 graph1 0;
+#X array pulse-output 882 float 1;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+-0.000595874 -0.00230419 -0.00489247 -0.0079886 -0.0111031 -0.0136588
+-0.0150265 -0.0145652 -0.0116643 -0.00578651 0.00349116 0.0164404 0.0331502
+0.053503 0.07716 0.103556 0.131906 0.161221 0.190337 0.217948 0.242659
+0.263032 0.277648 0.285166 0.284387 0.274312 0.254195 0.223595 0.182412
+0.130918 0.0697662 3.77493e-08 -0.0769659 -0.15937 -0.245148 -0.331982
+-0.417371 -0.498706 -0.573349 -0.638721 -0.692392 -0.73216 -0.756144
+-0.762844 -0.751213 -0.720704 -0.671304 -0.603552 -0.518539 -0.417892
+-0.303736 -0.178644 -0.0455695 0.0922389 0.231325 0.368128 0.499086
+0.620744 0.729857 0.823489 0.899103 0.954641 0.988583 1 0.988581 0.954636
+0.899097 0.823482 0.729849 0.620736 0.499078 0.36812 0.231317 0.0922306
+-0.0455773 -0.178651 -0.303742 -0.417897 -0.518543 -0.603555 -0.671306
+-0.720705 -0.751212 -0.762841 -0.75614 -0.732156 -0.692386 -0.638716
+-0.573343 -0.4987 -0.417364 -0.331975 -0.245142 -0.159365 -0.0769609
+4.2975e-06 0.0697696 0.13092 0.182414 0.223595 0.254194 0.274311 0.284386
+0.285164 0.277645 0.263029 0.242655 0.217944 0.190333 0.161218 0.131903
+0.103553 0.0771573 0.0535009 0.0331485 0.0164392 0.00349044 -0.00578681
+-0.0116642 -0.0145648 -0.0150259 -0.0136581 -0.0111024 -0.00798793
+-0.0048919 -0.00230377 -0.000595639 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 -0.000595874 -0.00230419 -0.00489247 -0.0079886
+-0.0111031 -0.0136588 -0.0150265 -0.0145652 -0.0116643 -0.00578651
+0.00349116 0.0164404 0.0331502 0.053503 0.07716 0.103556 0.131906 0.161221
+0.190337 0.217948 0.242659 0.263032 0.277648 0.285166 0.284387 0.274312
+0.254195 0.223595 0.182412 0.130918 0.0697662 3.77493e-08 -0.0769659
+-0.15937 -0.245148 -0.331982 -0.417371 -0.498706 -0.573349 -0.638721
+-0.692392 -0.73216 -0.756144 -0.762844 -0.751213 -0.720704 -0.671304
+-0.603552 -0.518539 -0.417892 -0.303736 -0.178644 -0.0455695 0.0922389
+0.231325 0.368128 0.499086 0.620744 0.729857 0.823489 0.899103 0.954641
+0.988583 1 0.988581 0.954636 0.899097 0.823482 0.729849 0.620736 0.499078
+0.36812 0.231317 0.0922306 -0.0455773 -0.178651 -0.303742 -0.417897
+-0.518543 -0.603555 -0.671306 -0.720705 -0.751212 -0.762841 -0.75614
+-0.732156 -0.692386 -0.638716 -0.573343 -0.4987 -0.417364 -0.331975
+-0.245142 -0.159365 -0.0769609 4.2975e-06 0.0697696 0.13092 0.182414
+0.223595 0.254194 0.274311 0.284386 0.285164 0.277645 0.263029 0.242655
+0.217944 0.190333 0.161218 0.131903 0.103553 0.0771573 0.0535009 0.0331485
+0.0164392 0.00349044 -0.00578681 -0.0116642 -0.0145648 -0.0150259 -0.0136581
+-0.0111024 -0.00798793 -0.0048919 -0.00230377 -0.000595639 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.000595874 -0.00230416
+-0.00489245 -0.00798859 -0.0111031 -0.0136587 -0.0150265 -0.0145652
+-0.0116643 -0.00578659 0.00349105 0.0164403 0.03315 0.0535028 0.0771598
+0.103556 0.131906 0.161221 0.190337 0.217948 0.242659 0.263032 0.277648
+0.285166 0.284388 0.274312 0.254195 0.223595 0.182413 0.130918 0.0697669
+7.86753e-07 -0.0769651 -0.15937 -0.245147 -0.33198 -0.41737 -0.498705
+-0.573348 -0.63872 -0.692391 -0.73216 -0.756143 -0.762844 -0.751214
+-0.720705 -0.671306 -0.603554 -0.518541 -0.417894 -0.303738 -0.178647
+-0.0455723 0.092236 0.231322 0.368125 0.499084 0.620742 0.729855 0.823487
+0.899102 0.95464 0.988582 1 0.988581 0.954637 0.899099 0.823484 0.729851
+0.620738 0.49908 0.368122 0.231319 0.0922334 -0.0455745 -0.178649 -0.30374
+-0.417895 -0.518541 -0.603553 -0.671305 -0.720704 -0.751212 -0.762841
+-0.756141 -0.732157 -0.692387 -0.638717 -0.573344 -0.498701 -0.417366
+-0.331977 -0.245143 -0.159366 -0.0769625 2.7995e-06 0.0697683 0.130919
+0.182413 0.223594 0.254194 0.27431 0.284386 0.285164 0.277645 0.263029
+0.242656 0.217945 0.190333 0.161218 0.131903 0.103553 0.0771578 0.0535013
+0.0331489 0.0164395 0.00349066 -0.00578666 -0.0116641 -0.0145648 -0.0150259
+-0.0136581 -0.0111024 -0.00798799 -0.00489194 -0.0023038 -0.000595668
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.000595845
+-0.00230414 -0.00489237 -0.0079885 -0.011103 -0.0136587 -0.0150265
+-0.0145652 -0.0116644 -0.00578674 0.00349082 0.01644 0.0331496 0.0535023
+0.0771592 0.103555 0.131905 0.161221 0.190336 0.217948 0.242658 0.263032
+0.277648 0.285166 0.284388 0.274312 0.254195 0.223596 0.182414 0.130919
+0.0697682 2.28476e-06 -0.0769635 -0.159368 -0.245145 -0.331979 -0.417369
+-0.498704 -0.573347 -0.63872 -0.69239 -0.732159 -0.756143 -0.762844
+-0.751214 -0.720706 -0.671306 -0.603554 -0.518542;
+#X coords 0 1.02 882 -1.02 200 130 1;
+#X restore 555 438 graph;
+#X floatatom 95 540 0 0 0 0 - - -;
+#N canvas 159 26 495 266 output 0;
+#X obj 338 160 t b;
+#X obj 338 110 f;
+#X obj 338 60 inlet;
+#X text 344 29 mute;
+#X obj 338 185 f;
+#X msg 425 178 0;
+#X msg 338 85 bang;
+#X obj 338 135 moses 1;
+#X obj 425 153 t b f;
+#X obj 397 117 moses 1;
+#X obj 83 148 dbtorms;
+#X obj 397 92 r master-lvl;
+#X obj 83 42 r master-lvl;
+#X obj 338 210 s master-lvl;
+#X obj 22 181 inlet~;
+#X obj 199 41 inlet;
+#X text 199 18 level;
+#X obj 199 100 s master-lvl;
+#X msg 96 65 set \$1;
+#X obj 96 89 outlet;
+#X msg 214 64 \; pd dsp 1;
+#X obj 83 194 line~;
+#X obj 22 212 *~;
+#X obj 22 241 dac~;
+#X obj 83 171 pack 0 50;
+#X text 20 158 audio;
+#X text 93 110 show level;
+#X connect 0 0 4 0;
+#X connect 1 0 7 0;
+#X connect 2 0 6 0;
+#X connect 4 0 13 0;
+#X connect 5 0 13 0;
+#X connect 6 0 1 0;
+#X connect 7 0 0 0;
+#X connect 7 1 8 0;
+#X connect 8 0 5 0;
+#X connect 9 1 4 1;
+#X connect 10 0 24 0;
+#X connect 11 0 1 1;
+#X connect 11 0 9 0;
+#X connect 12 0 10 0;
+#X connect 12 0 18 0;
+#X connect 14 0 22 0;
+#X connect 15 0 17 0;
+#X connect 15 0 20 0;
+#X connect 18 0 19 0;
+#X connect 21 0 22 1;
+#X connect 22 0 23 0;
+#X connect 22 0 23 1;
+#X connect 24 0 21 0;
+#X restore 66 568 pd output;
+#X msg 126 537 MUTE;
+#X obj 66 512 hip~ 5;
+#N canvas 0 0 450 300 graph1 0;
+#X array spectrum 128 float 1;
+#A 0 0 0 5.72086e-07 4.35594e-09 4.91705e-09 2.16027e-09 0.00202057
+4.24412e-09 2.51822e-09 3.55519e-09 1.86774e-07 5.09902e-09 4.43006e-09
+1.43977e-08 0.0207614 2.27655e-08 4.61363e-09 4.95827e-08 0.0625001
+6.86507e-08 2.03529e-08 1.0832e-07 0.106351 1.30828e-07 4.55719e-08
+1.59902e-07 0.125 1.7126e-07 5.86073e-08 1.66772e-07 0.105955 1.58294e-07
+4.75069e-08 1.21405e-07 0.0625001 9.88823e-08 2.09158e-08 5.58692e-08
+0.0213166 3.36563e-08 2.66374e-09 1.10162e-08 2.47495e-07 7.87783e-09
+7.37122e-09 2.21492e-09 0.00309751 9.37995e-09 4.67057e-09 4.41898e-09
+2.91005e-07 2.63542e-09 5.52117e-09 4.95142e-09 0.00105719 3.41022e-09
+3.88484e-09 2.79546e-09 1.48468e-07 2.92093e-09 2.81605e-09 5.14287e-09
+0.00049407 1.61664e-09 3.33433e-09 3.02569e-09 6.16652e-08 3.53551e-09
+2.53044e-09 1.99719e-09 0.000273591 3.36077e-09 1.78292e-09 2.63728e-09
+1.02926e-07 1.85056e-09 2.60451e-09 1.9105e-09 0.000168965 2.54087e-09
+2.44669e-09 1.7663e-09 5.07823e-08 1.7373e-09 1.93053e-09 2.37802e-09
+0.000112236 9.06956e-10 2.09284e-09 1.87544e-09 2.87574e-08 1.60238e-09
+1.92114e-09 1.37246e-09 7.8833e-05 1.90948e-09 1.62834e-09 1.34355e-09
+5.1494e-08 2.07664e-09 1.57132e-09 1.74076e-09 5.75908e-05 1.84311e-09
+1.75959e-09 2.01811e-09 2.85589e-08 1.22609e-09 1.79491e-09 1.49164e-09
+4.35632e-05 1.22845e-09 1.35936e-09 1.07548e-09 1.17722e-08 1.11771e-09
+1.2998e-09 1.55576e-09 3.37656e-05 1.12928e-09 1.5467e-09 1.30181e-09
+2.09478e-08 1.57824e-09 1.35836e-09 1.01612e-09 2.67905e-05 1.46808e-09
+;
+#X coords 0 0.5 128 0 256 130 1;
+#X restore 532 270 graph;
+#X msg 256 470 bang;
+#N canvas 63 120 466 478 fft 0;
+#X obj 47 17 inlet~;
+#X obj 163 231 tabwrite~ spectrum;
+#X obj 227 167 inlet;
+#X obj 45 62 rfft~;
+#X obj 45 95 *~;
+#X obj 76 95 *~;
+#X obj 45 125 sqrt~;
+#X obj 191 45 block~ 1024 1;
+#X obj 44 243 rmstodb~;
+#X obj 166 266 tabwrite~ log-spectrum;
+#X obj 45 149 /~ 1024;
+#X obj 45 173 biquad~ 0 0 0 0 1;
+#X obj 175 104 tabwrite~ pulse-output;
+#X obj 225 373 bang~;
+#X obj 227 398 s zphase;
+#X connect 0 0 3 0;
+#X connect 0 0 12 0;
+#X connect 2 0 1 0;
+#X connect 2 0 9 0;
+#X connect 2 0 12 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 3 1 5 0;
+#X connect 3 1 5 1;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 6 0 10 0;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 11 0 1 0;
+#X connect 11 0 8 0;
+#X connect 13 0 14 0;
+#X restore 77 487 pd fft;
+#X text 68 -30 PULSE SPECTRUM MEASUREMENT;
+#X text 555 571 ---- 0.02 seconds ----;
+#X obj 103 14 samplerate~;
+#X obj 103 41 / 1024;
+#X obj 101 -7 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 243 45 expr 2048/$f1;
+#X obj 243 69 del;
+#X msg 166 93 0;
+#N canvas 0 0 450 300 graph1 0;
+#X array log-spectrum 128 float 1;
+#A 0 0 0 0 0 0 0 46.1095 0 0 0 0 0 0 0 66.3451 0 0 0 75.9176 0 0 0
+80.5348 0 0 0 81.9382 0 0 0 80.5024 0 0 0 75.9176 0 0 0 66.5743 0 0
+0 0 0 0 0 49.8202 0 0 0 0 0 0 0 40.4831 0 0 0 0 0 0 0 33.8758 0 0 0
+0 0 0 0 28.742 0 0 0 0 0 0 0 24.5559 0 0 0 0 0 0 0 21.0026 0 0 0 0
+0 0 0 17.9342 0 0 0 0 0 0 0 15.2071 0 0 0 0 0 0 0 12.7824 0 0 0 0 0
+0 0 10.5695 0 0 0 0 0 0 0 8.55961 0;
+#X coords 0 100 128 0 256 130 1;
+#X restore 541 108 graph;
+#X msg 525 32 \; log-spectrum ylabel -10 20 40 60 80 100;
+#X obj 56 159 *~ 6;
+#X obj 56 185 cos~;
+#X obj 66 451 *~;
+#X text 294 471 <-- graph;
+#N canvas 455 182 509 437 pulses 0;
+#X obj 99 46 inlet~;
+#X obj 227 166 line~;
+#X obj 124 290 cos~;
+#X obj 227 142 pack 0 50;
+#X floatatom 227 41 0 0 0 0 - - -;
+#X obj 96 192 -~ 0.5;
+#X obj 96 218 *~;
+#X obj 227 67 / 10;
+#X obj 227 91 moses 0;
+#X msg 227 115 0;
+#X obj 95 241 clip~ -0.5 0.5;
+#X text 222 23 bandwidth;
+#X obj 227 191 +~ 1;
+#X obj 85 288 *~ 2;
+#X obj 125 365 +~;
+#X obj 85 309 cos~;
+#X msg 209 265 0 0.5 0.5;
+#X obj 208 288 unpack 0 0 0;
+#X msg 289 264 0.091 0.5 0.409;
+#X obj 86 331 *~;
+#X obj 123 330 *~;
+#X obj 155 330 sig~;
+#X obj 208 218 loadbang;
+#X obj 126 391 outlet~;
+#X connect 0 0 5 0;
+#X connect 1 0 12 0;
+#X connect 2 0 20 0;
+#X connect 3 0 1 0;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 10 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 3 0;
+#X connect 9 0 3 0;
+#X connect 10 0 2 0;
+#X connect 10 0 13 0;
+#X connect 12 0 6 1;
+#X connect 13 0 15 0;
+#X connect 14 0 23 0;
+#X connect 15 0 19 0;
+#X connect 16 0 17 0;
+#X connect 17 0 19 1;
+#X connect 17 1 20 1;
+#X connect 17 2 21 0;
+#X connect 18 0 17 0;
+#X connect 19 0 14 0;
+#X connect 20 0 14 0;
+#X connect 21 0 14 1;
+#X connect 22 0 16 0;
+#X restore 102 200 pd pulses;
+#X obj 102 224 *~;
+#X obj 135 225 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 177 224 *~;
+#X obj 210 225 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#N canvas 364 140 407 391 paf 0;
+#X obj 99 46 inlet~;
+#X floatatom 227 41 0 0 0 0 - - -;
+#X obj 101 156 *~;
+#X text 222 23 bandwidth;
+#X obj 45 335 outlet~;
+#X obj 99 92 cos~;
+#X obj 28 257 *~;
+#X obj 61 258 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 199 259 *~;
+#X obj 232 260 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 199 236 expr~ exp(- $v1*$v1);
+#X obj 28 234 expr~ 1/(1 + $v1*$v1);
+#X connect 0 0 5 0;
+#X connect 1 0 2 1;
+#X connect 2 0 10 0;
+#X connect 2 0 11 0;
+#X connect 5 0 2 0;
+#X connect 6 0 4 0;
+#X connect 7 0 6 1;
+#X connect 8 0 4 0;
+#X connect 9 0 8 1;
+#X connect 10 0 8 0;
+#X connect 11 0 6 0;
+#X restore 177 200 pd paf;
+#X obj 102 69 * 2;
+#X obj 102 92 phasor~;
+#X obj 103 117 *~ 2;
+#X obj 103 141 wrap~;
+#X obj 166 71 r zphase;
+#X connect 1 0 2 1;
+#X connect 2 0 1 0;
+#X connect 3 0 2 2;
+#X connect 4 0 2 0;
+#X connect 6 0 7 1;
+#X connect 10 0 11 0;
+#X connect 10 0 13 0;
+#X connect 11 0 28 0;
+#X connect 12 0 10 0;
+#X connect 13 0 14 0;
+#X connect 14 0 6 0;
+#X connect 15 0 29 1;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 7 0;
+#X connect 20 0 4 0;
+#X connect 22 0 23 0;
+#X connect 23 0 20 1;
+#X connect 24 0 23 1;
+#X connect 25 0 20 1;
+#X connect 26 0 25 1;
+#X connect 27 0 25 0;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 29 0 27 0;
+#X connect 30 0 31 0;
+#X connect 31 0 18 0;
+#X connect 31 0 22 0;
+#X connect 32 0 15 0;
+#X restore 170 63 pd make-tables;
+#N canvas 143 457 1084 475 xfer-to-fig 0;
+#X obj 142 162 until;
+#X obj 144 137 t b b;
+#X obj 145 192 f;
+#X msg 196 153 0;
+#X obj 231 173 + 1;
+#X obj 145 231 t f f;
+#X obj 145 257 expr 75 + 5 * $f1;
+#X obj 145 283 pack;
+#X obj 144 114 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 231 196 sel 49;
+#X obj 342 165 until;
+#X obj 344 140 t b b;
+#X obj 345 195 f;
+#X msg 396 156 0;
+#X obj 431 176 + 1;
+#X obj 345 234 t f f;
+#X obj 345 260 expr 75 + 5 * $f1;
+#X obj 345 286 pack;
+#X obj 344 117 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 431 199 sel 49;
+#X msg 145 314 \; add-rect \$1 175 2 \$2 \;;
+#X msg 345 317 \; add-rect \$1 75 2 \$2 \;;
+#X obj 200 284 * 40;
+#X msg 23 17 \; pd-z clear;
+#X msg 24 62 \; start pd-z \;;
+#X obj 200 231 tabread spectrum;
+#X obj 399 237 tabread log-spectrum;
+#X obj 399 289 * 0.5;
+#X obj 558 241 until;
+#X obj 557 215 t b b;
+#X obj 558 270 f;
+#X msg 609 231 0;
+#X obj 644 251 + 1;
+#X obj 558 309 t f f;
+#X obj 558 361 pack;
+#X obj 557 192 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 644 274 sel 255;
+#X obj 611 310 tabread pulse-output;
+#X obj 611 364 * 20;
+#X msg 558 392 \; y-plot-point \$1 \$2 \;;
+#X obj 200 212 * 2;
+#X obj 399 214 * 2;
+#X msg 146 32 \; add-haxis 50 175 300 297 \; add-vaxis 75 145 90 87
+;
+#X msg 342 33 \; add-haxis 50 75 300 297 \; add-vaxis 75 45 90 87;
+#X msg 540 42 \; add-vaxis 75 245 90 87;
+#X msg 539 6 \; add-haxis 50 275 300 297;
+#X msg 556 158 \; add-y-plot 256 75 276 1 \;;
+#X msg 541 78 \; add-v-seg 75 270 10 3 \;;
+#X msg 542 110 \; add-v-seg 331 270 10 3 \;;
+#X obj 790 119 until;
+#X obj 790 97 t b b;
+#X obj 816 144 f;
+#X msg 832 96 0;
+#X obj 863 127 + 1;
+#X obj 816 176 t f f;
+#X obj 790 77 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 816 213 expr 75 + 3 * $f1;
+#X obj 816 287 swap;
+#X obj 816 311 pack;
+#X obj 816 334 route 0;
+#X msg 860 362 \; add-rect \$2 75 1 \$1 \;;
+#X msg 816 402 \; add-rect \$1 74 1 2 \;;
+#X text 194 368 add bar graphs of spectra (db and linear);
+#X text 459 434 add regular graph of time-domain signal;
+#X text 782 436 add bar graph of time-domain signal;
+#X obj 862 260 tabread pulse-output;
+#X obj 862 283 * 20;
+#X obj 860 235 * 4;
+#X obj 863 149 sel 64;
+#X msg 788 13 \; add-haxis 50 75 260 257 \; add-vaxis 75 35 80 77;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 1 3 0;
+#X connect 2 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 1;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 5 1 40 0;
+#X connect 6 0 7 0;
+#X connect 7 0 20 0;
+#X connect 8 0 1 0;
+#X connect 9 0 0 1;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 11 1 13 0;
+#X connect 12 0 14 0;
+#X connect 12 0 15 0;
+#X connect 13 0 12 1;
+#X connect 14 0 12 1;
+#X connect 14 0 19 0;
+#X connect 15 0 16 0;
+#X connect 15 1 41 0;
+#X connect 16 0 17 0;
+#X connect 17 0 21 0;
+#X connect 18 0 11 0;
+#X connect 19 0 10 1;
+#X connect 22 0 7 1;
+#X connect 25 0 22 0;
+#X connect 26 0 27 0;
+#X connect 27 0 17 1;
+#X connect 28 0 30 0;
+#X connect 29 0 28 0;
+#X connect 29 1 31 0;
+#X connect 30 0 32 0;
+#X connect 30 0 33 0;
+#X connect 31 0 30 1;
+#X connect 32 0 30 1;
+#X connect 32 0 36 0;
+#X connect 33 0 34 0;
+#X connect 33 1 37 0;
+#X connect 34 0 39 0;
+#X connect 35 0 29 0;
+#X connect 36 0 28 1;
+#X connect 37 0 38 0;
+#X connect 38 0 34 1;
+#X connect 40 0 25 0;
+#X connect 41 0 26 0;
+#X connect 49 0 51 0;
+#X connect 50 0 49 0;
+#X connect 50 1 52 0;
+#X connect 51 0 53 0;
+#X connect 51 0 54 0;
+#X connect 52 0 51 1;
+#X connect 53 0 51 1;
+#X connect 53 0 68 0;
+#X connect 54 0 56 0;
+#X connect 54 1 67 0;
+#X connect 55 0 50 0;
+#X connect 56 0 57 0;
+#X connect 57 0 58 0;
+#X connect 57 1 58 1;
+#X connect 58 0 59 0;
+#X connect 59 0 61 0;
+#X connect 59 1 60 0;
+#X connect 65 0 66 0;
+#X connect 66 0 57 1;
+#X connect 67 0 65 0;
+#X connect 68 0 49 1;
+#X restore 170 83 pd xfer-to-fig;
+#N canvas 0 0 295 209 z 0;
+#X scalar haxis 15 152 260 257 \;;
+#X scalar vaxis 40 112 80 77 \;;
+#X scalar rect 40 151 1 2 \;;
+#X scalar rect 43 151 1 2 \;;
+#X scalar rect 46 151 1 2 \;;
+#X scalar rect 49 151 1 2 \;;
+#X scalar rect 52 151 1 2 \;;
+#X scalar rect 55 151 1 2 \;;
+#X scalar rect 58 151 1 2 \;;
+#X scalar rect 61 151 1 2 \;;
+#X scalar rect 64 151 1 2 \;;
+#X scalar rect 67 151 1 2 \;;
+#X scalar rect 70 151 1 2 \;;
+#X scalar rect 73 151 1 2 \;;
+#X scalar rect 76 151 1 2 \;;
+#X scalar rect 79 151 1 2 \;;
+#X scalar rect 82 151 1 2 \;;
+#X scalar rect 85 151 1 2 \;;
+#X scalar rect 88 151 1 2 \;;
+#X scalar rect 91 152 1 -0.159772 \;;
+#X scalar rect 94 152 1 -0.291303 \;;
+#X scalar rect 97 152 1 0.328808 \;;
+#X scalar rect 100 152 1 2.07112 \;;
+#X scalar rect 103 152 1 4.35897 \;;
+#X scalar rect 106 152 1 5.70333 \;;
+#X scalar rect 109 152 1 4.47189 \;;
+#X scalar rect 112 152 1 7.54985e-07 \;;
+#X scalar rect 115 152 1 -6.63963 \;;
+#X scalar rect 118 152 1 -12.7744 \;;
+#X scalar rect 121 152 1 -15.2569 \;;
+#X scalar rect 124 152 1 -12.071 \;;
+#X scalar rect 127 152 1 -3.57289 \;;
+#X scalar rect 130 152 1 7.36256 \;;
+#X scalar rect 133 152 1 16.4698 \;;
+#X scalar rect 136 152 1 20 \;;
+#X scalar rect 139 152 1 16.4696 \;;
+#X scalar rect 142 152 1 7.36239 \;;
+#X scalar rect 145 152 1 -3.57303 \;;
+#X scalar rect 148 152 1 -12.0711 \;;
+#X scalar rect 151 152 1 -15.2568 \;;
+#X scalar rect 154 152 1 -12.7743 \;;
+#X scalar rect 157 152 1 -6.6395 \;;
+#X scalar rect 160 152 1 8.59499e-05 \;;
+#X scalar rect 163 152 1 4.4719 \;;
+#X scalar rect 166 152 1 5.70328 \;;
+#X scalar rect 169 152 1 4.35889 \;;
+#X scalar rect 172 152 1 2.07106 \;;
+#X scalar rect 175 152 1 0.328785 \;;
+#X scalar rect 178 152 1 -0.291296 \;;
+#X scalar rect 181 152 1 -0.159759 \;;
+#X scalar rect 184 151 1 2 \;;
+#X scalar rect 187 151 1 2 \;;
+#X scalar rect 190 151 1 2 \;;
+#X scalar rect 193 151 1 2 \;;
+#X scalar rect 196 151 1 2 \;;
+#X scalar rect 199 151 1 2 \;;
+#X scalar rect 202 151 1 2 \;;
+#X scalar rect 205 151 1 2 \;;
+#X scalar rect 208 151 1 2 \;;
+#X scalar rect 211 151 1 2 \;;
+#X scalar rect 214 151 1 2 \;;
+#X scalar rect 217 151 1 2 \;;
+#X scalar rect 220 151 1 2 \;;
+#X scalar rect 223 151 1 2 \;;
+#X scalar rect 226 151 1 2 \;;
+#X scalar rect 229 151 1 2 \;;
+#X scalar haxis 14 54 260 257 \;;
+#X scalar vaxis 39 14 80 77 \;;
+#X scalar rect 39 54 1 4 \;;
+#X scalar rect 42 54 1 3.3323 \;;
+#X scalar rect 45 54 1 1.54259 \;;
+#X scalar rect 48 54 1 -0.79404 \;;
+#X scalar rect 51 54 1 -2.91726 \;;
+#X scalar rect 54 54 1 -4.11763 \;;
+#X scalar rect 57 54 1 -3.96264 \;;
+#X scalar rect 60 54 1 -2.44418 \;;
+#X scalar rect 63 54 1 3.89423e-05 \;;
+#X scalar rect 66 54 1 2.60298 \;;
+#X scalar rect 69 54 1 4.49454 \;;
+#X scalar rect 72 54 1 4.97508 \;;
+#X scalar rect 75 54 1 3.75585 \;;
+#X scalar rect 78 54 1 1.08972 \;;
+#X scalar rect 81 54 1 -2.2576 \;;
+#X scalar rect 84 54 1 -5.20314 \;;
+#X scalar rect 87 54 1 -6.66666 \;;
+#X scalar rect 90 54 1 -5.93063 \;;
+#X scalar rect 93 54 1 -2.93258 \;;
+#X scalar rect 96 54 1 1.61277 \;;
+#X scalar rect 99 54 1 6.32867 \;;
+#X scalar rect 102 54 1 9.53511 \;;
+#X scalar rect 105 54 1 9.78238 \;;
+#X scalar rect 108 54 1 6.41828 \;;
+#X scalar rect 111 54 1 9.5218e-07 \;;
+#X scalar rect 114 54 1 -7.64207 \;;
+#X scalar rect 117 54 1 -13.8196 \;;
+#X scalar rect 120 54 1 -15.8683 \;;
+#X scalar rect 123 54 1 -12.2735 \;;
+#X scalar rect 126 54 1 -3.59228 \;;
+#X scalar rect 129 54 1 7.3706 \;;
+#X scalar rect 132 54 1 16.4709 \;;
+#X scalar rect 135 54 1 20 \;;
+#X scalar rect 138 54 1 16.4708 \;;
+#X scalar rect 141 54 1 7.37045 \;;
+#X scalar rect 144 54 1 -3.59244 \;;
+#X scalar rect 147 54 1 -12.2736 \;;
+#X scalar rect 150 54 1 -15.8683 \;;
+#X scalar rect 153 54 1 -13.8195 \;;
+#X scalar rect 156 54 1 -7.64198 \;;
+#X scalar rect 159 54 1 0.0001084 \;;
+#X scalar rect 162 54 1 6.41836 \;;
+#X scalar rect 165 54 1 9.78243 \;;
+#X scalar rect 168 54 1 9.53509 \;;
+#X scalar rect 171 54 1 6.32861 \;;
+#X scalar rect 174 54 1 1.6127 \;;
+#X scalar rect 177 54 1 -2.93264 \;;
+#X scalar rect 180 54 1 -5.93066 \;;
+#X scalar rect 183 54 1 -6.66665 \;;
+#X scalar rect 186 54 1 -5.2031 \;;
+#X scalar rect 189 54 1 -2.25755 \;;
+#X scalar rect 192 54 1 1.08976 \;;
+#X scalar rect 195 54 1 3.75588 \;;
+#X scalar rect 198 54 1 4.97508 \;;
+#X scalar rect 201 54 1 4.49451 \;;
+#X scalar rect 204 54 1 2.60294 \;;
+#X scalar rect 207 54 1 3.42067e-07 \;;
+#X scalar rect 210 54 1 -2.44421 \;;
+#X scalar rect 213 54 1 -3.96265 \;;
+#X scalar rect 216 54 1 -4.11761 \;;
+#X scalar rect 219 54 1 -2.91723 \;;
+#X scalar rect 222 54 1 -0.794005 \;;
+#X scalar rect 225 54 1 1.54263 \;;
+#X scalar rect 228 54 1 3.33232 \;;
+#X text 79 25 (a);
+#X text 78 117 (b);
+#X coords 0 209 1 208 0 0 0;
+#X restore 167 108 pd z;

@@ -1,0 +1,130 @@
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N struct u-arrow float x float y float z;
+#N struct haxis float x float y float w float w-3;
+#N struct h-seg float x float y float z float w;
+#N struct d-arrow float x float y float z;
+#N struct vaxis float x float y float h float h-3;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct seg float x float y float dx float dy float w;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct l-arrow float x float y float z;
+#N struct v-seg float x float y float z float w;
+#N struct rect float x float y float w float h;
+#N struct frame float x float y float w float h;
+#N struct thickcircle float x float y float color float h float h2
+;
+#N struct divide float x float y;
+#N struct minus float x float y;
+#N struct plus float x float y;
+#N struct times float x float y;
+#N canvas 547 104 482 287 10;
+#N canvas 107 8 351 425 fig 1;
+#X scalar y-plot 65 330 1 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 1 \;
+4 \; 7 \; 8.5 \; 10 \; 11.5 \; 13 \; 15 \; 17 \; 19 \; 21 \; 22.5 \;
+24 \; 25.5 \; 27 \; 28.5 \; 30 \; 31.5 \; 33 \; 36 \; 39 \; 40 \; 41
+\; 42 \; 43 \; 45 \; 46 \; 48 \; 49 \; 49 \; 48 \; 45 \; 42 \; 39 \;
+36 \; 35 \; 34 \; 33 \; 32 \; 31 \; 31 \; 30 \; 29 \; 27 \; 26 \; 25
+\; 23 \; 21 \; 19 \; 18 \; 17 \; 15 \; 14 \; 12 \; 11 \; 10 \; 10 \;
+10 \; 9 \; 9 \; 9 \; 9 \; 9 \; 9 \; 9 \; 9 \; 9 \; 10 \; 10 \; 10 \;
+11 \; 11 \; 12 \; 12 \; 13 \; 13 \; 14 \; 14 \; 14 \; 14 \; 14 \; 14
+\; 14 \; 13 \; 13 \; 13 \; 13 \; 13 \; 13 \; 22.5 \; 23.5 \; 24.5 \;
+26.5 \; 27.5 \; 28.5 \; 29.5 \; 30.5 \; 30.5 \; 31.5 \; 31.5 \; 32.5
+\; 32.5 \; 32.5 \; 32.5 \; 32.5 \; 32.5 \; 31.5 \; 30.5 \; 29.5 \;
+28.5 \; 27.5 \; 23.5 \; 23.5 \; 23.5 \; 22.5 \; 23.5 \; 23.5 \; 24.5
+\; 24.5 \; 25.5 \; 26.5 \; 27.5 \; 28.5 \; 29.5 \; 30.5 \; 31.5 \;
+32.5 \; 34.5 \; 35.5 \; 35.5 \; 36.5 \; 37.5 \; 38.5 \; 39.5 \; 39.5
+\; 39.5 \; 38.5 \; 38.5 \; 38.5 \; 38.5 \; 38.5 \; 38.5 \; 38.5 \;
+39.5 \; 40.5 \; 41.5 \; 43.5 \; 44.5 \; 45.5 \; 47.5 \; 49.5 \; 51.5
+\; 52.5 \; 54.5 \; 56.5 \; 57.5 \; 57.5 \; 57.5 \; 57.5 \; 57.5 \;
+57.5 \; 56.5 \; 56.5 \; 56.5 \; 56.5 \; 56.5 \; 56.5 \; 56.5 \; 57.5
+\; 63.5 \; \;;
+#X scalar u-arrow 112 351 -33 \;;
+#X scalar haxis 33 297 206 202 \;;
+#X text 194 128 time;
+#X scalar h-seg 67 357 168 1 \;;
+#X text 237 59 threshold;
+#X scalar u-arrow 180 352 -33 \;;
+#X scalar d-arrow 85 363 40 \;;
+#X scalar d-arrow 162 363 40 \;;
+#X text 96 6 onsets;
+#X text 107 106 turnoffs;
+#X scalar d-arrow 192 363 40 \;;
+#X text 7 68 (a);
+#X scalar y-plot 62 155 1 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 1 \;
+4 \; 7 \; 8.5 \; 10 \; 11.5 \; 13 \; 15 \; 17 \; 19 \; 21 \; 22.5 \;
+24 \; 25.5 \; 27 \; 28.5 \; 30 \; 31.5 \; 33 \; 36 \; 39 \; 40 \; 41
+\; 42 \; 43 \; 45 \; 46 \; 48 \; 49 \; 49 \; 48 \; 45 \; 42 \; 39 \;
+36 \; 35 \; 34 \; 33 \; 32 \; 31 \; 31 \; 30 \; 29 \; 27 \; 26 \; 25
+\; 23 \; 21 \; 19 \; 18 \; 17 \; 15 \; 14 \; 12 \; 11 \; 10 \; 10 \;
+10 \; 9 \; 9 \; 9 \; 9 \; 9 \; 9 \; 9 \; 9 \; 9 \; 10 \; 10 \; 10 \;
+11 \; 11 \; 12 \; 12 \; 13 \; 13 \; 14 \; 14 \; 14 \; 14 \; 14 \; 14
+\; 14 \; 13 \; 13 \; 13 \; 13 \; 13 \; 13 \; 22.5 \; 23.5 \; 24.5 \;
+26.5 \; 27.5 \; 28.5 \; 29.5 \; 30.5 \; 30.5 \; 31.5 \; 31.5 \; 32.5
+\; 32.5 \; 32.5 \; 32.5 \; 32.5 \; 32.5 \; 31.5 \; 30.5 \; 29.5 \;
+28.5 \; 27.5 \; 23.5 \; 23.5 \; 23.5 \; 22.5 \; 23.5 \; 23.5 \; 24.5
+\; 24.5 \; 25.5 \; 26.5 \; 27.5 \; 28.5 \; 29.5 \; 30.5 \; 31.5 \;
+32.5 \; 34.5 \; 35.5 \; 35.5 \; 36.5 \; 37.5 \; 38.5 \; 39.5 \; 39.5
+\; 39.5 \; 38.5 \; 38.5 \; 38.5 \; 38.5 \; 38.5 \; 38.5 \; 38.5 \;
+39.5 \; 40.5 \; 41.5 \; 43.5 \; 44.5 \; 45.5 \; 47.5 \; 49.5 \; 51.5
+\; 52.5 \; 54.5 \; 56.5 \; 57.5 \; 57.5 \; 57.5 \; 57.5 \; 57.5 \;
+57.5 \; 56.5 \; 56.5 \; 56.5 \; 56.5 \; 56.5 \; 56.5 \; 56.5 \; 57.5
+\; 63.5 \; \;;
+#X scalar u-arrow 121 163 -15 \;;
+#X scalar h-seg 46 183 168 1 \;;
+#X scalar d-arrow 84 188 40 \;;
+#X scalar d-arrow 162 188 40 \;;
+#X scalar vaxis 52 265 144 138 \;;
+#X text 219 232 high threshold;
+#X text 218 248 low threshold;
+#X scalar h-seg 46 171 168 1 \;;
+#X text 6 230 (b);
+#X scalar y-plot 61 49 1 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 1 \;
+4 \; 7 \; 8.5 \; 10 \; 11.5 \; 13 \; 15 \; 17 \; 19 \; 21 \; 22.5 \;
+24 \; 25.5 \; 27 \; 28.5 \; 30 \; 31.5 \; 33 \; 36 \; 39 \; 40 \; 41
+\; 42 \; 43 \; 45 \; 46 \; 48 \; 49 \; 49 \; 48 \; 45 \; 42 \; 39 \;
+36 \; 35 \; 34 \; 33 \; 32 \; 31 \; 31 \; 30 \; 29 \; 27 \; 26 \; 25
+\; 23 \; 21 \; 19 \; 18 \; 17 \; 15 \; 14 \; 12 \; 11 \; 10 \; 10 \;
+10 \; 9 \; 9 \; 9 \; 9 \; 9 \; 9 \; 9 \; 9 \; 9 \; 10 \; 10 \; 10 \;
+11 \; 11 \; 12 \; 12 \; 13 \; 13 \; 14 \; 14 \; 14 \; 14 \; 14 \; 14
+\; 14 \; 13 \; 13 \; 13 \; 13 \; 13 \; 13 \; 22.5 \; 23.5 \; 24.5 \;
+26.5 \; 27.5 \; 28.5 \; 29.5 \; 30.5 \; 30.5 \; 31.5 \; 31.5 \; 32.5
+\; 32.5 \; 32.5 \; 32.5 \; 32.5 \; 32.5 \; 31.5 \; 30.5 \; 29.5 \;
+28.5 \; 27.5 \; 23.5 \; 23.5 \; 23.5 \; 22.5 \; 23.5 \; 23.5 \; 24.5
+\; 24.5 \; 25.5 \; 26.5 \; 27.5 \; 28.5 \; 29.5 \; 30.5 \; 31.5 \;
+32.5 \; 34.5 \; 35.5 \; 35.5 \; 36.5 \; 37.5 \; 38.5 \; 39.5 \; 39.5
+\; 39.5 \; 38.5 \; 38.5 \; 38.5 \; 38.5 \; 38.5 \; 38.5 \; 38.5 \;
+39.5 \; 40.5 \; 41.5 \; 43.5 \; 44.5 \; 45.5 \; 47.5 \; 49.5 \; 51.5
+\; 52.5 \; 54.5 \; 56.5 \; 57.5 \; 57.5 \; 57.5 \; 57.5 \; 57.5 \;
+57.5 \; 56.5 \; 56.5 \; 56.5 \; 56.5 \; 56.5 \; 56.5 \; 56.5 \; 57.5
+\; 63.5 \; \;;
+#X scalar u-arrow 134 57 -15 \;;
+#X scalar h-seg 46 78 168 1 \;;
+#X scalar d-arrow 84 83 40 \;;
+#X scalar d-arrow 162 83 40 \;;
+#X text 6 335 (c);
+#X scalar h-seg 85 78 50 3 \;;
+#X scalar h-seg 163 78 50 3 \;;
+#X text 114 405 dead periods;
+#X scalar u-curve-arrow 99 74 -23 -37 -54 37 \;;
+#X scalar u-curve-arrow 195 73 -28 -37 -54 -14 \;;
+#X coords 0 425 1 424 0 0 0;
+#X restore 304 57 pd fig;
+#N canvas 419 38 439 154 put-in-graph 0;
+#X msg 182 36 \; add-y-plot 71 0 0 1;
+#X msg 17 6 \; start pd-fig;
+#X restore 68 162 pd put-in-graph;
+#X obj 322 107 templates;

@@ -1,0 +1,60 @@
+#N struct rect float x float y float w float h;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct seg float x float y float dx float dy float w;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct vaxis float x float y float h float h-3;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct l-arrow float x float y float z;
+#N struct u-arrow float x float y float z;
+#N struct d-arrow float x float y float z;
+#N struct v-seg float x float y float z float w;
+#N struct h-seg float x float y float z float w;
+#N struct haxis float x float y float w float w-3;
+#N struct frame float x float y float w float h;
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N struct thickcircle float x float y float color float h float h2
+;
+#N struct times float x float y;
+#N struct plus float x float y;
+#N struct minus float x float y;
+#N struct divide float x float y;
+#N canvas 183 147 464 200 10;
+#N canvas 20 101 327 162 fig 1;
+#X scalar rect 25 120 1 7 \;;
+#X obj 23 103 +~;
+#X obj 23 58 +~;
+#X obj 117 57 +~;
+#X obj 117 14 osc~ 440;
+#X obj 23 14 osc~ 330;
+#X obj 39 35 osc~ 330.2;
+#X obj 133 35 osc~ 440.33;
+#X obj 217 58 +~;
+#X obj 217 14 osc~ 587;
+#X obj 232 35 osc~ 587.25;
+#X obj 23 81 +~;
+#X text 8 128 (OUT);
+#X connect 2 0 11 0;
+#X connect 3 0 11 1;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 1;
+#X connect 7 0 3 1;
+#X connect 8 0 1 1;
+#X connect 9 0 8 0;
+#X connect 10 0 8 1;
+#X connect 11 0 1 0;
+#X restore 68 74 pd fig;
+#X obj 68 30 templates;

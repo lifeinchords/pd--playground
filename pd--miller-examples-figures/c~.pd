@@ -1,0 +1,4 @@
+#N canvas 0 0 450 300 10;
+#X obj 98 29 inlet~;
+#X obj 98 105 outlet~;
+#X text 229 67 for figure 7.25...;

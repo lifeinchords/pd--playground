@@ -1,0 +1,28 @@
+#N canvas 69 4 337 189 10;
+#X text 136 2 attack;
+#X text 196 3 release;
+#X obj 137 119 line~;
+#X msg 197 83 0 500;
+#X obj 94 136 *~;
+#X msg 137 83 1 2500;
+#X msg 82 62 10 200;
+#X obj 137 62 del 200;
+#X obj 137 19 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 197 20 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 145 43 stop;
+#X text 83 113 (IN);
+#X text 78 162 (OUT);
+#X text 93 123 |;
+#X text 93 150 |;
+#X connect 2 0 4 1;
+#X connect 3 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 0;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;
+#X connect 8 0 6 0;
+#X connect 9 0 3 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;

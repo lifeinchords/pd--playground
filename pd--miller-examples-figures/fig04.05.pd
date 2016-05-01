@@ -1,0 +1,329 @@
+#N struct y-plot float x float y float w array z y-point;
+#N struct y-point float y;
+#N struct haxis float x float y float w float w-3;
+#N struct xy-curve float x float y float w array z xy-point;
+#N struct xy-point float x float y;
+#N struct seg float x float y float dx float dy float w;
+#N struct l-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle2 float x float y float h float h2 float mh float mh2
+;
+#N struct vaxis float x float y float h float h-3;
+#N struct xy-plot float x float y float w array z xy-point;
+#N struct d-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct circle float x float y float color float h float h2;
+#N struct u-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-curve-arrow float x float y float z float z2 float z3 float
+h;
+#N struct r-arrow float x float y float z;
+#N struct l-arrow float x float y float z;
+#N struct u-arrow float x float y float z;
+#N struct d-arrow float x float y float z;
+#N struct v-seg float x float y float z float w;
+#N struct h-seg float x float y float z float w;
+#N struct rect float x float y float w float h;
+#N struct frame float x float y float w float h;
+#N struct thickcircle float x float y float color float h float h2
+;
+#N struct times float x float y;
+#N struct plus float x float y;
+#N struct minus float x float y;
+#N struct divide float x float y;
+#N canvas 433 164 482 287 10;
+#N canvas 119 73 257 270 fig 1;
+#X scalar y-plot 37 16 1 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 36.4889 \; 31.783 \; 28.2536
+\; 24.7242 \; 20.0183 \; 16.4889 \; 11.7831 \; 8.2537 \; 3.54779 \;
+0.0183846 \; 4.68751 \; 8.21692 \; 11.7463 \; 16.4522 \; 19.9817 \;
+24.6875 \; 28.2169 \; 32.9228 \; 36.4522 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; \;;
+#X scalar y-plot 37 66 1 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20
+\; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \;
+20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20
+\; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \;
+20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20
+\; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \;
+20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20
+\; 20 \; 20 \; 20 \; 20 \; 20 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; \;;
+#X scalar y-plot 39 166 1 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 36.4889 \; 31.783 \; 28.2536
+\; 24.7242 \; 20.0183 \; 16.4889 \; 11.7831 \; 8.2537 \; 3.54779 \;
+0.0183846 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \;
+40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; 40
+\; 40 \; 40 \; 40 \; 40 \; 40 \; 40 \; \;;
+#X scalar y-plot 39 219 1 \; 0 \; 1.75551 \; 3.52023 \; 5.87315 \;
+7.63786 \; 9.99083 \; 11.7555 \; 14.1085 \; 15.8732 \; 18.2261 \; 19.9908
+\; 21.7555 \; 24.1085 \; 25.8732 \; 28.2261 \; 29.9908 \; 32.3437 \;
+34.1084 \; 36.4613 \; 38.226 \; 39.9907 \; 39.4183 \; 38.9804 \; 38.3964
+\; 37.9585 \; 37.3745 \; 36.9366 \; 36.3526 \; 35.9147 \; 35.4767 \;
+34.8928 \; 34.4548 \; 33.8709 \; 33.433 \; 32.849 \; 32.4111 \; 31.8271
+\; 31.3892 \; 30.9512 \; 30.3673 \; 29.9293 \; 29.3454 \; 28.9074 \;
+28.3235 \; 27.8855 \; 27.3016 \; 26.8636 \; 26.4257 \; 25.8418 \; 25.4038
+\; 24.8199 \; 24.3819 \; 23.798 \; 23.36 \; 22.7761 \; 22.3381 \; 21.9002
+\; 21.3162 \; 20.8783 \; 20.2943 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20
+\; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \;
+20 \; 20 \; 20 \; 20 \; 2.34375 \; 4.10846 \; 5.87315 \; 8.22611 \;
+9.99083 \; 12.3438 \; 14.1085 \; 16.4614 \; 18.2261 \; 20.5791 \; 22.3438
+\; 24.1085 \; 26.4614 \; 28.2261 \; 30.5791 \; 32.3437 \; 34.6966 \;
+36.4613 \; 38.8142 \; 40 \; 39.5643 \; 38.9804 \; 38.5424 \; 37.9585
+\; 37.5205 \; 36.9366 \; 36.4986 \; 35.9147 \; 35.4767 \; 35.0388 \;
+34.4549 \; 34.0169 \; 33.433 \; 32.995 \; 32.4111 \; 31.9731 \; 31.3892
+\; 30.9512 \; 30.5133 \; 29.9293 \; 29.4914 \; 28.9074 \; 28.4695 \;
+27.8855 \; 27.4476 \; 26.8637 \; 26.4257 \; 25.8418 \; 25.4038 \; 24.9659
+\; 24.3819 \; 23.944 \; 23.36 \; 22.9221 \; 22.3381 \; 21.9002 \; 21.3162
+\; 20.8783 \; 20.4403 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \;
+20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20 \; 20
+\; 20 \; 20 \; 19.1223 \; 17.9458 \; 17.0635 \; 15.887 \; 15.0046 \;
+14.1222 \; 12.9458 \; 12.0634 \; 10.8869 \; 10.0046 \; 8.82812 \; 7.94576
+\; 6.76929 \; 5.88694 \; 5.00459 \; 3.82813 \; 2.94578 \; 1.7693 \;
+0.88695 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0
+\; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; 0 \; \;;
+#X text 204 105 time;
+#X text 3 25 (a);
+#X scalar haxis 29 218 220 215 \;;
+#X text 4 168 (b);
+#X scalar haxis 29 166 220 215 \;;
+#X scalar haxis 27 77 220 215 \;;
+#X scalar haxis 26 16 220 215 \;;
+#X coords 0 270 1 269 0 0 0;
+#X restore 56 49 pd fig;
+#N canvas 15 439 1228 419 put-in-graph 0;
+#X obj 66 84 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 66 106 t b b;
+#X obj 138 150 0;
+#X obj 7 186 f;
+#X obj 44 189 + 1;
+#X obj 115 150 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 7 328 pack;
+#X obj 7 355 s y-plot-point;
+#X msg 6 134 1;
+#X msg 44 134 0;
+#X obj 7 213 moses 200;
+#X msg 179 13 \; add-y-plot 200 10 10 1;
+#X obj 67 317 snapshot~;
+#X obj 7 292 t f b;
+#X msg 17 6 \; start pd-fig \; pd dsp 1;
+#X obj 6 159 metro 5;
+#X msg 102 210 -1;
+#X msg 136 235 -1;
+#X obj 136 210 del 400;
+#X obj 203 210 del 800;
+#X msg 203 235 0;
+#X obj 335 81 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 335 103 t b b;
+#X obj 407 147 0;
+#X obj 276 183 f;
+#X obj 313 186 + 1;
+#X obj 384 147 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 276 325 pack;
+#X obj 276 352 s y-plot-point;
+#X msg 275 131 1;
+#X msg 313 131 0;
+#X obj 276 210 moses 200;
+#X obj 336 314 snapshot~;
+#X obj 276 289 t f b;
+#X obj 275 156 metro 5;
+#X obj 295 259 line~;
+#X obj 405 207 del 350;
+#X msg 405 232 0 50;
+#X obj 473 207 del 400;
+#X obj 26 262 adsr 40 100 200 50 100;
+#X msg 371 207 40;
+#X msg 472 232 40;
+#X msg 362 287 set 40;
+#X obj 881 75 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 881 97 t b b;
+#X obj 953 141 0;
+#X obj 822 177 f;
+#X obj 859 180 + 1;
+#X obj 930 141 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 822 319 pack;
+#X obj 822 346 s y-plot-point;
+#X msg 821 125 1;
+#X msg 859 125 0;
+#X obj 822 204 moses 200;
+#X obj 882 308 snapshot~;
+#X obj 822 283 t f b;
+#X obj 821 150 metro 5;
+#X obj 841 253 line~;
+#X obj 951 201 del 350;
+#X msg 951 226 0 50;
+#X obj 1019 201 del 400;
+#X msg 917 201 40;
+#X msg 908 281 set 40;
+#X obj 613 75 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 613 97 t b b;
+#X obj 685 141 0;
+#X obj 554 177 f;
+#X obj 591 180 + 1;
+#X obj 662 141 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 554 319 pack;
+#X obj 554 346 s y-plot-point;
+#X msg 553 125 1;
+#X msg 591 125 0;
+#X obj 554 204 moses 200;
+#X obj 614 308 snapshot~;
+#X obj 554 283 t f b;
+#X obj 553 150 metro 5;
+#X obj 573 253 line~;
+#X obj 690 200 del 400;
+#X msg 690 224 40;
+#X msg 640 281 set 20;
+#X msg 649 201 20;
+#X msg 1018 226 40 50;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 1 0 16 0;
+#X connect 1 0 18 0;
+#X connect 1 0 19 0;
+#X connect 1 1 2 0;
+#X connect 2 0 3 1;
+#X connect 3 0 4 0;
+#X connect 3 0 10 0;
+#X connect 4 0 3 1;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X connect 8 0 15 0;
+#X connect 9 0 15 0;
+#X connect 10 0 13 0;
+#X connect 10 1 5 0;
+#X connect 12 0 6 1;
+#X connect 13 0 6 0;
+#X connect 13 1 12 0;
+#X connect 15 0 3 0;
+#X connect 16 0 39 0;
+#X connect 17 0 39 0;
+#X connect 18 0 17 0;
+#X connect 19 0 20 0;
+#X connect 20 0 39 0;
+#X connect 21 0 22 0;
+#X connect 22 0 29 0;
+#X connect 22 0 40 0;
+#X connect 22 0 36 0;
+#X connect 22 0 38 0;
+#X connect 22 1 23 0;
+#X connect 22 1 42 0;
+#X connect 23 0 24 1;
+#X connect 24 0 25 0;
+#X connect 24 0 31 0;
+#X connect 25 0 24 1;
+#X connect 26 0 30 0;
+#X connect 27 0 28 0;
+#X connect 29 0 34 0;
+#X connect 30 0 34 0;
+#X connect 31 0 33 0;
+#X connect 31 1 26 0;
+#X connect 32 0 27 1;
+#X connect 33 0 27 0;
+#X connect 33 1 32 0;
+#X connect 34 0 24 0;
+#X connect 35 0 32 0;
+#X connect 36 0 37 0;
+#X connect 37 0 35 0;
+#X connect 38 0 41 0;
+#X connect 39 0 12 0;
+#X connect 40 0 35 0;
+#X connect 41 0 35 0;
+#X connect 42 0 32 0;
+#X connect 43 0 44 0;
+#X connect 44 0 51 0;
+#X connect 44 0 61 0;
+#X connect 44 0 58 0;
+#X connect 44 0 60 0;
+#X connect 44 1 45 0;
+#X connect 44 1 62 0;
+#X connect 45 0 46 1;
+#X connect 46 0 47 0;
+#X connect 46 0 53 0;
+#X connect 47 0 46 1;
+#X connect 48 0 52 0;
+#X connect 49 0 50 0;
+#X connect 51 0 56 0;
+#X connect 52 0 56 0;
+#X connect 53 0 55 0;
+#X connect 53 1 48 0;
+#X connect 54 0 49 1;
+#X connect 55 0 49 0;
+#X connect 55 1 54 0;
+#X connect 56 0 46 0;
+#X connect 57 0 54 0;
+#X connect 58 0 59 0;
+#X connect 59 0 57 0;
+#X connect 60 0 82 0;
+#X connect 61 0 57 0;
+#X connect 62 0 54 0;
+#X connect 63 0 64 0;
+#X connect 64 0 71 0;
+#X connect 64 0 81 0;
+#X connect 64 0 78 0;
+#X connect 64 1 65 0;
+#X connect 64 1 80 0;
+#X connect 65 0 66 1;
+#X connect 66 0 67 0;
+#X connect 66 0 73 0;
+#X connect 67 0 66 1;
+#X connect 68 0 72 0;
+#X connect 69 0 70 0;
+#X connect 71 0 76 0;
+#X connect 72 0 76 0;
+#X connect 73 0 75 0;
+#X connect 73 1 68 0;
+#X connect 74 0 69 1;
+#X connect 75 0 69 0;
+#X connect 75 1 74 0;
+#X connect 76 0 66 0;
+#X connect 77 0 74 0;
+#X connect 78 0 79 0;
+#X connect 79 0 77 0;
+#X connect 80 0 74 0;
+#X connect 81 0 77 0;
+#X connect 82 0 57 0;
+#X restore 47 162 pd put-in-graph;
+#X obj 44 110 templates;

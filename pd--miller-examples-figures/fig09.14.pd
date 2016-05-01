@@ -1,0 +1,95 @@
+#N canvas 0 0 416 239 10;
+#X obj 10 42 fft~;
+#X obj 10 84 tabwrite~ \$0-real;
+#X obj 32 63 tabwrite~ \$0-imaginary;
+#X obj 10 19 osc~;
+#X text 85 10 (a);
+#X obj 245 101 *~;
+#X obj 245 59 inlet~;
+#X obj 245 122 rfft~;
+#X obj 260 80 tabreceive~ \$0-hann;
+#X obj 245 148 *~;
+#X obj 274 149 *~;
+#X obj 245 191 sqrt~;
+#X obj 320 44 block~ 512;
+#X obj 245 170 +~;
+#X obj 245 212 tabwrite~ \$0-magnitude;
+#N canvas 228 148 651 544 fft-analysis 0;
+#X obj 15 164 *~;
+#X obj 14 99 inlet~;
+#X obj 15 218 rfft~;
+#X obj 36 140 tabreceive~ \$0-hann;
+#X obj 14 306 *~;
+#X obj 56 306 *~;
+#X obj 15 356 sqrt~;
+#X obj 14 498 tabwrite~ \$0-magnitude;
+#X obj 23 386 loadbang;
+#X obj 23 470 metro 250;
+#X obj 23 449 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X msg 31 411 \; pd dsp 1;
+#X obj 15 8 block~ 512;
+#X text 225 131 tabreceive~ outputs array contents \,;
+#X text 225 149 constantly \, every block. Here it's;
+#X text 223 169 used to get the Hann window to;
+#X text 225 187 multiply by the input.;
+#X text 120 7 block~ object does no computation but declares this;
+#X text 120 24 window to be operating at a different block size from
+;
+#X text 122 58 Fourier transform.;
+#X text 121 40 the parent window. This determines the size of the;
+#X text 76 99 The inlet~ automatically re-blocks to the new block size.
+;
+#X obj 15 332 +~;
+#X text 94 308 Take the magnitude by squaring real and imaginary part
+\, adding and taking square root.;
+#X text 110 424 periodically graph the output. It appears every 512
+samples (about 12 milliseconds) but we only update the graph 4 times
+per second. The graph is back on the main (parent) window.;
+#X text 82 215 forward real FFT. Like "fft~" \, but only one inlet
+(for the real part) and only the first half of the output signals are
+used. (The others are determined by symmetry: they're complex conjugates
+of the first half \, in reverse order.) This takes 1/2 the CPU time
+of "fft".;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 2 0 4 1;
+#X connect 2 1 5 0;
+#X connect 2 1 5 1;
+#X connect 3 0 0 1;
+#X connect 4 0 22 0;
+#X connect 5 0 22 1;
+#X connect 6 0 7 0;
+#X connect 8 0 10 0;
+#X connect 8 0 11 0;
+#X connect 9 0 7 0;
+#X connect 10 0 9 0;
+#X connect 22 0 6 0;
+#X restore 23 211 pd fft-analysis;
+#X obj 23 190 osc~;
+#X floatatom 23 153 5 0 0 0 - - -;
+#X obj 23 170 * 10;
+#X text 83 164 tens of Hz.;
+#X text 64 151 <- frequency \,;
+#X text 80 195 click here and;
+#X text 136 206 <- see;
+#X text 81 131 (b);
+#X text 298 14 (c);
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 3 0 0 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 9 0;
+#X connect 7 0 9 1;
+#X connect 7 1 10 0;
+#X connect 7 1 10 1;
+#X connect 8 0 5 1;
+#X connect 9 0 13 0;
+#X connect 10 0 13 1;
+#X connect 11 0 14 0;
+#X connect 13 0 11 0;
+#X connect 16 0 15 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
